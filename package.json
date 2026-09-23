@@ -12,8 +12,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --nojekyll",
     "geo:fetch": "tsx scripts/fetch-osm.ts",
-    "geo:process": "tsx scripts/process-geo.ts",
-    "geo:check": "tsc -p tsconfig.scripts.json"
+    "geo:process": "tsx scripts/process-geo.ts && tsx scripts/qa-geography.ts",
+    "geo:check": "tsc -p tsconfig.scripts.json",
+    "geo:bake": "tsx scripts/bake-terrain.ts",
+    "geo:qa": "tsx scripts/qa-geography.ts",
+    "test:performance": "node scripts/benchmark-map.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

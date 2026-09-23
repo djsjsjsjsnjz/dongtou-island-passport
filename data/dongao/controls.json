@@ -1,0 +1,126 @@
+[
+  {
+    "id": "ref-1",
+    "name": "半屏大桥北桥头",
+    "reference": [
+      121.15133027343751,
+      27.821800390625
+    ],
+    "adopted": [
+      121.15133653080599,
+      27.821619497086427
+    ],
+    "distanceMeters": 20.06,
+    "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+    "pixel": [
+      56.5,
+      180.5
+    ],
+    "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+    "uncertaintyMeters": 20,
+    "amapRaw": null,
+    "amapWgs84": null
+  },
+  {
+    "id": "ref-2",
+    "name": "半屏大桥南桥头",
+    "reference": [
+      121.1514888671875,
+      27.819404453125
+    ],
+    "adopted": [
+      121.15149110595799,
+      27.81938586489997
+    ],
+    "distanceMeters": 2.07,
+    "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+    "pixel": [
+      58.5,
+      214.5
+    ],
+    "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+    "uncertaintyMeters": 20,
+    "amapRaw": null,
+    "amapWgs84": null
+  },
+  {
+    "id": "ref-3",
+    "name": "东岙沙滩西侧岸线",
+    "reference": [
+      121.1562466796875,
+      27.824619140625
+    ],
+    "adopted": [
+      121.1562539,
+      27.8242952
+    ],
+    "distanceMeters": 35.91,
+    "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+    "pixel": [
+      118.5,
+      140.5
+    ],
+    "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+    "uncertaintyMeters": 20,
+    "amapRaw": null,
+    "amapWgs84": null
+  },
+  {
+    "id": "ref-4",
+    "name": "东岙沙滩东侧岸线",
+    "reference": [
+      121.15791191406251,
+      27.823703046875
+    ],
+    "adopted": [
+      121.1575522,
+      27.8235399
+    ],
+    "distanceMeters": 39.78,
+    "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+    "pixel": [
+      139.5,
+      153.5
+    ],
+    "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+    "uncertaintyMeters": 20,
+    "amapRaw": null,
+    "amapWgs84": null
+  },
+  {
+    "id": "node/13607433057",
+    "name": "东岙村",
+    "osm": [
+      121.1567624,
+      27.8257104
+    ],
+    "adopted": [
+      121.15599415965787,
+      27.825667736962423
+    ],
+    "role": "road-spawn",
+    "distanceMeters": 75.82,
+    "referenceSource": "OSM original vs gameplay access point (not independent)",
+    "amapRaw": null,
+    "amapWgs84": null,
+    "entrance": null
+  },
+  {
+    "id": "way/836480414",
+    "name": "东岙沙滩",
+    "osm": [
+      121.15720669701527,
+      27.8242077
+    ],
+    "adopted": [
+      121.15639,
+      27.8246
+    ],
+    "role": "player-arrival-unverified-entrance",
+    "distanceMeters": 91.44,
+    "referenceSource": "OSM original vs gameplay access point (not independent)",
+    "amapRaw": null,
+    "amapWgs84": null,
+    "entrance": null
+  }
+]

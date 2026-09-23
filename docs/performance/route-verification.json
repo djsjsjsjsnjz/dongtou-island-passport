@@ -1,0 +1,16 @@
+{
+  "elapsedMs": 47288,
+  "arrival": {
+    "x": -60.338492641168656,
+    "z": 99.779865197123,
+    "longitude": 121.1563875499807,
+    "latitude": 27.824599594945234,
+    "y": 0.9938509890428864,
+    "raw": 0.9590042066387632,
+    "slope": 5.983789951507973,
+    "road": "非道路",
+    "blocked": "",
+    "distance": 145.005708100752
+  },
+  "method": "Actual RAF movement at 3.2m/s, no teleport; follows OSM way then 21m unmapped approach"
+}

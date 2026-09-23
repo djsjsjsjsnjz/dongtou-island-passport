@@ -1,0 +1,23 @@
+{
+  "sourceUrl": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N27_00_E121_00_DEM/Copernicus_DSM_COG_10_N27_00_E121_00_DEM.tif",
+  "retrievedAt": "2026-09-23T01:40:35.724996+00:00",
+  "sourceSha256": "9768f3fe7f47ad3eb5287d8753a586ce40f2943f803b3ec77cd6994936751b1a",
+  "license": "Copernicus DEM Licence (GLO-30/GLO-90)",
+  "resolution": "1 arc-second; approximately 27.4m east-west \u00d7 30.8m north-south",
+  "verticalDatum": "EGM2008 metres, DSM not bare-earth DTM",
+  "nodata": null,
+  "processing": [
+    "Native raster window with one-cell halo; pixel-center affine coordinates retained",
+    "No reprojection, no horizontal shift, no invented elevations",
+    "Runtime bilinear valid-weight interpolation; all-invalid fails closed; outside bbox blocked",
+    "Sea masked to 0m using OSM land polygons; inland water blocked",
+    "1:1 vertical scale; terrain tessellation interpolates DSM and adds no detail"
+  ],
+  "cropShape": [
+    69,
+    77
+  ],
+  "min": 0.0,
+  "max": 114.23760986328125,
+  "nodataCount": 0
+}

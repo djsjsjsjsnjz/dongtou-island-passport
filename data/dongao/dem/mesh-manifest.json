@@ -1,0 +1,28 @@
+{
+  "sourceLandSha256": "9ece89bf245b28b175c0c58faa333354e203907c4449ff2d9790dd931000cb4b",
+  "sourceHeightfieldSha256": "70fe67cd2c55405f8b829529816d1ba3033545621eba8a03f0b6b8b02c3a0c55",
+  "bbox": [
+    121.14685,
+    27.81648,
+    121.16715,
+    27.83452
+  ],
+  "center": {
+    "longitude": 121.157,
+    "latitude": 27.8255
+  },
+  "crs": "EPSG:4326",
+  "worldAxes": "+X east, -Z north, +Y up; metres",
+  "encoding": "little-endian Float32 non-indexed XYZ triangles",
+  "bytes": 2231712,
+  "sha256": "904b5fe72d02e8b1df94e08d50b9b094cd1caa1cb55e8cd871da12bcad06a122",
+  "triangles": 61992,
+  "grid": {
+    "nx": 200,
+    "nz": 200,
+    "dx": 9.999766201589717,
+    "dz": 9.995661167278735
+  },
+  "source": "Native Copernicus heightfield bilinear samples at grid and clipped coast vertices",
+  "method": "Regular 10m grid cells intersected with exact OSM land; triangulated per cell. Shared cell boundaries prevent T-junction height cracks. Interpolation adds no source detail."
+}

@@ -9,6 +9,7 @@ import {
 } from "./world/MapScene";
 import { DEFAULT_LAYERS } from "./world/layers";
 import type { CameraMode } from "./camera/mapCamera";
+import type { PlayerState } from "./world/player";
 import { GEO_CONFIG } from "./geo/geoConfig";
 import "./ui/map.css";
 const DebugPanel = import.meta.env.DEV
@@ -26,6 +27,7 @@ export default function MapReview() {
       height: 0,
     }),
     [stats, setStats] = useState<MapStats | null>(null);
+  const [player, setPlayer] = useState<PlayerState | null>(null);
   const map = useRef<MapHandle>(null);
   useEffect(() => {
     const controller = new AbortController();
@@ -58,7 +60,7 @@ export default function MapReview() {
         <div>
           <span className="geo-eyebrow">DONG'AO · SPATIAL PROTOTYPE / 01</span>
           <h1>东岙 · 真实地图骨架</h1>
-          <p>WGS84 · 约 2 × 2 km · OSM 审阅阶段</p>
+          <p>WGS84 · 约 2 × 2 km · 真实 DSM · 1:1 高程</p>
         </div>
         <a href="?demo=legacy">原概念演示 ↗</a>
       </header>
@@ -70,6 +72,7 @@ export default function MapReview() {
               data={data}
               mode={mode}
               visibility={visibility}
+              onPlayer={setPlayer}
               onSample={setSample}
               onStats={setStats}
               onError={setError}
@@ -112,6 +115,42 @@ export default function MapReview() {
               −
             </button>
           </div>
+          <div className="geo-walk-controls">
+            <button
+              onClick={() => {
+                setMode("oblique");
+                setTimeout(() => map.current?.walk(), 0);
+              }}
+            >
+              跟随玩家
+            </button>
+            <span>WASD / 方向键 · 北向移动</span>
+          </div>
+          <div className="geo-dpad" aria-label="触控方向键">
+            {(
+              [
+                ["北", 0, -1],
+                ["西", -1, 0],
+                ["南", 0, 1],
+                ["东", 1, 0],
+              ] as const
+            ).map(([name, x, z]) => (
+              <button
+                key={name}
+                aria-label={`向${name}移动`}
+                onPointerDown={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.setPointerCapture(e.pointerId);
+                  map.current?.input(x, z);
+                }}
+                onPointerUp={() => map.current?.input(0, 0)}
+                onPointerCancel={() => map.current?.input(0, 0)}
+                onLostPointerCapture={() => map.current?.input(0, 0)}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
           <span className="geo-north">
             {mode === "top" ? "↑ N · 正北" : "倾斜视角"}
           </span>
@@ -132,9 +171,12 @@ export default function MapReview() {
         </section>
         <aside className="geo-sidebar" aria-label="地图数据与调试">
           <section className="geo-review-state">
-            <span className="geo-status">等待空间核对</span>
-            <h2>先看清楚，东岙在哪里</h2>
-            <p>海岸、路网与沙滩来自 OSM。当前为平面地图，尚未接入 DEM。</p>
+            <span className="geo-status">地理 QA · 尚未通过</span>
+            <h2>真实地形与步行验收</h2>
+            <p>
+              海岸与道路来自 OSM；山体来自 Copernicus GLO-30。高程倍率
+              1×，原始分辨率约 30m。
+            </p>
           </section>
           {data && (
             <>
@@ -153,10 +195,10 @@ export default function MapReview() {
                 </div>
               </div>
               <div className="geo-data-gap" role="note">
-                <strong>建筑数据不足</strong>
+                <strong>建筑与配准仍待核实</strong>
                 <p>
-                  OSM 仅收录 1
-                  个建筑轮廓，不能代表真实村庄分布。褐色区域是住宅用地，不是逐栋建筑。
+                  OSM + East Asian Buildings 公开轮廓；无实测高度时统一暂定
+                  6m。ML 提取误差、高德 POI 与现场入口仍待核实。
                 </p>
               </div>
               <section className="geo-locations">
@@ -218,11 +260,16 @@ export default function MapReview() {
                     onChange={(id) =>
                       setVisibility((v) => ({ ...v, [id]: !v[id] }))
                     }
+                    player={player}
                     sample={sample}
                     stats={stats}
                   />
                 </Suspense>
               )}
+              <p className="geo-source-note">
+                地形：Copernicus WorldDEM-30 / EU & ESA。
+                <a href="data/dongao/LICENSE.md">完整许可与署名</a>
+              </p>
               <p className="geo-source-note">
                 OSM 数据时间：{data.report.source.osmTimestamp.slice(0, 10)}
                 <br />

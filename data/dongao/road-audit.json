@@ -1,0 +1,132 @@
+{
+  "segments": 6829,
+  "centerlineSampleSpacingMeters": 3,
+  "byIssue": {
+    "bridge-profile-unverified": {
+      "samples": 129,
+      "ways": [
+        "way/506084787"
+      ]
+    },
+    "tunnel-profile-unavailable": {
+      "samples": 10,
+      "ways": [
+        "way/702532882"
+      ]
+    },
+    "non-bridge-inland-water": {
+      "samples": 4,
+      "ways": [
+        "way/1484029116"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "a": {
+        "x": 676.8060341864715,
+        "z": -318.72283849088643,
+        "y": 40.112747749988706
+      },
+      "b": {
+        "x": 679.5279318259436,
+        "z": -319.855229950927,
+        "y": 40.14038788029866
+      },
+      "id": "way/1484029116",
+      "name": "residential",
+      "kind": "residential",
+      "width": 4.5,
+      "bridge": false,
+      "tunnel": false,
+      "issues": [
+        "non-bridge-inland-water"
+      ],
+      "geo": {
+        "longitude": 121.16386974186047,
+        "latitude": 27.828376127906978
+      }
+    },
+    {
+      "a": {
+        "x": 679.5279318259436,
+        "z": -319.855229950927,
+        "y": 40.14038788029866
+      },
+      "b": {
+        "x": 682.2498294654157,
+        "z": -320.9876214109677,
+        "y": 40.11611472320571
+      },
+      "id": "way/1484029116",
+      "name": "residential",
+      "kind": "residential",
+      "width": 4.5,
+      "bridge": false,
+      "tunnel": false,
+      "issues": [
+        "non-bridge-inland-water"
+      ],
+      "geo": {
+        "longitude": 121.16389736976744,
+        "latitude": 27.82838634651163
+      }
+    },
+    {
+      "a": {
+        "x": 682.2498294654157,
+        "z": -320.9876214109677,
+        "y": 40.11611472320571
+      },
+      "b": {
+        "x": 684.9717271048877,
+        "z": -322.1200128710083,
+        "y": 40.08040771359234
+      },
+      "id": "way/1484029116",
+      "name": "residential",
+      "kind": "residential",
+      "width": 4.5,
+      "bridge": false,
+      "tunnel": false,
+      "issues": [
+        "non-bridge-inland-water"
+      ],
+      "geo": {
+        "longitude": 121.16392499767441,
+        "latitude": 27.82839656511628
+      }
+    },
+    {
+      "a": {
+        "x": 684.9717271048877,
+        "z": -322.1200128710083,
+        "y": 40.08040771359234
+      },
+      "b": {
+        "x": 687.6936247443598,
+        "z": -323.252404331049,
+        "y": 40.04470070397897
+      },
+      "id": "way/1484029116",
+      "name": "residential",
+      "kind": "residential",
+      "width": 4.5,
+      "bridge": false,
+      "tunnel": false,
+      "issues": [
+        "non-bridge-inland-water"
+      ],
+      "geo": {
+        "longitude": 121.16395262558139,
+        "latitude": 27.82840678372093
+      }
+    }
+  ],
+  "bridge": {
+    "minimumDeckMeters": 22.261491431216353,
+    "profile": "DSM abutment interpolation; unverified clearance; never sampled from sea"
+  },
+  "tunnel": "No surface road or traversal until longitudinal profile exists",
+  "steps": "No mapped steps in this snapshot; generalized DEM-following width/type supported, exact risers unavailable"
+}

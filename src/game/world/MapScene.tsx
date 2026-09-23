@@ -4,6 +4,9 @@ import type { WorldData } from "../data/types";
 import { createMapCamera, type CameraMode } from "../camera/mapCamera";
 import { buildWorldLayers, disposeWorld, type LayerVisibility } from "./layers";
 import { geoToWorld, worldToGeo, isInBounds } from "../geo/coordinates";
+import { QA_ROUTE } from "./qaRoute";
+import { createPlayer, type PlayerState } from "./player";
+import { queryTerrain } from "./terrain";
 import { getTerrainHeight } from "./terrain";
 export type MapSample = {
   x: number;
@@ -11,6 +14,7 @@ export type MapSample = {
   latitude: number;
   longitude: number;
   height: number;
+  raw?: number | null;
 };
 export type MapStats = {
   fps: number;
@@ -21,6 +25,8 @@ export type MapStats = {
   heapMB: number | null;
 };
 export type MapHandle = {
+  walk: () => void;
+  input: (x: number, z: number) => void;
   home: () => void;
   zoom: (factor: number) => void;
   focus: (latitude: number, longitude: number) => void;
@@ -30,6 +36,7 @@ type Props = {
   mode: CameraMode;
   visibility: LayerVisibility;
   onSample: (p: MapSample) => void;
+  onPlayer: (p: PlayerState) => void;
   onStats: (s: MapStats) => void;
   onError: (message: string) => void;
 };
@@ -47,6 +54,8 @@ export const MapScene = forwardRef<MapHandle, Props>(
     useImperativeHandle(
       ref,
       () => ({
+        walk: () => runtime.current?.walk(),
+        input: (x, z) => runtime.current?.input(x, z),
         home: () => runtime.current?.home(),
         zoom: (f) => runtime.current?.zoom(f),
         focus: (lat, lon) => runtime.current?.focus(lat, lon),
@@ -104,6 +113,101 @@ function createRuntime(
     throw e;
   }
   scene.add(world.root);
+  callbacks.current.onSample({
+    x: 0,
+    z: 0,
+    ...worldToGeo(0, 0),
+    height: getTerrainHeight(0, 0),
+    raw: queryTerrain(0, 0).raw,
+  });
+  const player = createPlayer(data);
+  const avatar = new THREE.Group();
+  const body = new THREE.Mesh(
+    new THREE.CapsuleGeometry(0.6, 1.1, 3, 6),
+    new THREE.MeshLambertMaterial({ color: "#ec612d" }),
+  );
+  body.position.y = 1.1;
+  avatar.add(body);
+  const marker = new THREE.Mesh(
+    new THREE.ConeGeometry(1.8, 3, 4),
+    new THREE.MeshBasicMaterial({ color: "#f26936" }),
+  );
+  marker.position.y = 4.5;
+  marker.rotation.x = Math.PI;
+  avatar.add(marker);
+  world.root.add(avatar);
+  const keys = new Set<string>();
+  let inputX = 0,
+    inputZ = 0,
+    follow = false,
+    lastTime = performance.now();
+  const keyboard = (e: KeyboardEvent) => {
+    if (
+      e.target instanceof HTMLInputElement ||
+      e.target instanceof HTMLTextAreaElement
+    )
+      return;
+    const k = e.key.toLowerCase();
+    if (
+      [
+        "w",
+        "a",
+        "s",
+        "d",
+        "arrowup",
+        "arrowdown",
+        "arrowleft",
+        "arrowright",
+      ].includes(k)
+    ) {
+      e.preventDefault();
+      if (e.type === "keydown") keys.add(k);
+      else keys.delete(k);
+    }
+  };
+  const clearInput = () => {
+    keys.clear();
+    inputX = inputZ = 0;
+    lastTime = performance.now();
+  };
+  window.addEventListener("keydown", keyboard);
+  window.addEventListener("keyup", keyboard);
+  window.addEventListener("blur", clearInput);
+  const walk = () => {
+    follow = true;
+    rig.setMode("oblique");
+    rig.focus(player.state.x, player.state.z);
+    rig.camera.zoom = 14;
+    rig.camera.updateProjectionMatrix();
+  };
+  let latestStats: MapStats | null = null;
+  const route = QA_ROUTE.map((p) => geoToWorld(p.latitude, p.longitude));
+  const playback = { active: false, index: 1, direction: 1, laps: 0 };
+  const qa = {
+    playback,
+    startRoute: () => {
+      player.reset();
+      playback.active = true;
+      playback.index = 1;
+      playback.direction = 1;
+      playback.laps = 0;
+      walk();
+    },
+    stopRoute: () => {
+      playback.active = false;
+    },
+    player: player.state,
+    stats: () => latestStats,
+    walk,
+    reset: () => player.reset(),
+    move: (x: number, z: number, dt: number) => player.move(x, z, dt),
+  };
+  if (import.meta.env.DEV)
+    (window as unknown as { __geoQA: typeof qa }).__geoQA = qa;
+  const scale = document.createElement("div");
+  scale.className = "geo-scale";
+  scale.textContent = "100 m";
+  host.appendChild(scale);
   host.appendChild(renderer.domElement);
   const labels = document.createElement("div");
   labels.className = "geo-labels";
@@ -136,11 +240,57 @@ function createRuntime(
   const projected = new THREE.Vector3();
   function render(now: number) {
     if (destroyed || lost || document.hidden) return;
+    const dt = Math.min(0.05, (now - lastTime) / 1000);
+    lastTime = now;
+    const ix =
+      inputX +
+      Number(keys.has("d") || keys.has("arrowright")) -
+      Number(keys.has("a") || keys.has("arrowleft"));
+    const iz =
+      inputZ +
+      Number(keys.has("s") || keys.has("arrowdown")) -
+      Number(keys.has("w") || keys.has("arrowup"));
+    if (ix || iz) {
+      playback.active = false;
+      player.move(ix, iz, dt);
+    } else if (import.meta.env.DEV && playback.active) {
+      const t = route[playback.index],
+        dx = t.x - player.state.x,
+        dz = t.z - player.state.z;
+      if (Math.hypot(dx, dz) < 0.25) {
+        if (playback.index === route.length - 1 || playback.index === 0) {
+          playback.direction *= -1;
+          playback.laps++;
+        }
+        playback.index += playback.direction;
+      } else {
+        player.move(dx, dz, Math.min(dt, Math.hypot(dx, dz) / 3.2));
+        if (player.state.blocked) playback.active = false;
+      }
+    }
+    world.layers.reference.visible =
+      callbacks.current.visibility.reference &&
+      callbacks.current.mode === "top" &&
+      !follow;
+    avatar.position.set(player.state.x, player.state.y, player.state.z);
+    if (follow) {
+      const target = new THREE.Vector3(
+          player.state.x,
+          player.state.y,
+          player.state.z,
+        ),
+        delta = target.clone().sub(rig.controls.target);
+      rig.controls.target.copy(target);
+      rig.camera.position.add(delta);
+    }
     rig.controls.update();
-    rig.constrain();
+    if (!follow) rig.constrain();
+    scale.style.width = `${(100 * width * rig.camera.zoom) / (rig.camera.right - rig.camera.left)}px`;
+    scale.style.display =
+      callbacks.current.mode === "top" && !follow ? "" : "none";
     for (const { p, label } of labelElements) {
       const { x, z } = geoToWorld(p.latitude, p.longitude);
-      projected.set(x, 5, z).project(rig.camera);
+      projected.set(x, getTerrainHeight(x, z) + 5, z).project(rig.camera);
       label.style.transform = `translate(${(projected.x * 0.5 + 0.5) * width}px,${(-projected.y * 0.5 + 0.5) * height}px) translate(-50%, -130%)`;
       // At full extent prioritize the two review landmarks; zoom reveals the remaining OSM names.
       label.style.display =
@@ -158,7 +308,7 @@ function createRuntime(
       const perf = performance as Performance & {
         memory?: { usedJSHeapSize: number };
       };
-      callbacks.current.onStats({
+      latestStats = {
         fps: Math.round((frames * 1000) / (now - statsAt)),
         calls: renderer.info.render.calls,
         triangles: renderer.info.render.triangles,
@@ -167,7 +317,9 @@ function createRuntime(
         heapMB: perf.memory
           ? Math.round(perf.memory.usedJSHeapSize / 1048576)
           : null,
-      });
+      };
+      callbacks.current.onStats(latestStats);
+      callbacks.current.onPlayer({ ...player.state });
       statsAt = now;
       frames = 0;
     }
@@ -187,7 +339,9 @@ function createRuntime(
       ),
       rig.camera,
     );
-    if (ray.ray.intersectPlane(plane, hit)) {
+    const terrainHit = ray.intersectObjects(world.layers.dem.children, true)[0];
+    if (terrainHit) hit.copy(terrainHit.point);
+    if (terrainHit || ray.ray.intersectPlane(plane, hit)) {
       const geo = worldToGeo(hit.x, hit.z);
       if (isInBounds(geo))
         callbacks.current.onSample({
@@ -195,10 +349,13 @@ function createRuntime(
           z: hit.z,
           ...geo,
           height: getTerrainHeight(hit.x, hit.z),
+          raw: queryTerrain(hit.x, hit.z).raw,
         });
     }
   };
   const visibility = () => {
+    clearInput();
+    playback.active = false;
     cancelAnimationFrame(frame);
     frames = 0;
     statsAt = performance.now();
@@ -218,16 +375,30 @@ function createRuntime(
   document.addEventListener("visibilitychange", visibility);
   frame = requestAnimationFrame(render);
   return {
-    home: rig.home,
+    walk,
+    input(x, z) {
+      inputX = x;
+      inputZ = z;
+    },
+    home() {
+      follow = false;
+      rig.home();
+    },
     zoom: rig.zoom,
     focus(lat, lon) {
+      follow = false;
       const p = geoToWorld(lat, lon);
       rig.focus(p.x, p.z);
     },
-    setMode: rig.setMode,
+    setMode(m) {
+      follow = false;
+      rig.setMode(m);
+    },
     setVisibility(v) {
       for (const key of Object.keys(v) as (keyof LayerVisibility)[])
         world.layers[key].visible = v[key];
+      world.layers.landuse.visible = v.landuse && v.dem;
+      world.layers.elevation.visible = v.elevation && v.dem;
       labels.hidden = !v.pois;
     },
     destroy() {
@@ -239,6 +410,12 @@ function createRuntime(
       renderer.dispose();
       renderer.domElement.remove();
       labels.remove();
+      scale.remove();
+      window.removeEventListener("keydown", keyboard);
+      window.removeEventListener("keyup", keyboard);
+      window.removeEventListener("blur", clearInput);
+      if (import.meta.env.DEV)
+        delete (window as unknown as { __geoQA?: typeof qa }).__geoQA;
       document.removeEventListener("visibilitychange", visibility);
       renderer.domElement.removeEventListener("pointermove", sample);
       renderer.domElement.removeEventListener("pointerdown", sample);

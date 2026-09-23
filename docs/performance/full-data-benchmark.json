@@ -1,0 +1,4343 @@
+{
+  "fingerprints": {
+    "src/game/world/terrain.ts": "8f80e205f6406ad0af74e72cb62631b360ba8a339141e6002fe4903a1bd3a433",
+    "src/game/world/layers.ts": "8f8802df29c18850e125bf7a2df39355d972da62476a6be8ea5c535b5eb399cd",
+    "src/game/world/MapScene.tsx": "d47e1d23c923aea5dd78f10964e2ce4ceda5a26cd88e5be983b9c121e8e81f65",
+    "src/game/world/player.ts": "cdb36745e2b1db182afdd67bd1141807fb29516a871b61473a2daf0edf1825e8",
+    "src/game/world/roads.ts": "cebca4af0c6813432099486ce47754a3b5fb4b3d55b542cf10ed0a48cb30e99a",
+    "public/data/dongao/world.json": "3a8208bd98e6cf205befd8f325cd3daa8fdbce20b4cbe16730197cc30a7be858",
+    "public/data/dongao/dem/terrain.f32": "904b5fe72d02e8b1df94e08d50b9b094cd1caa1cb55e8cd871da12bcad06a122"
+  },
+  "at": "2026-09-23T05:44:11.140Z",
+  "environment": {
+    "os": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M3",
+    "ramGB": 16,
+    "browser": "150.0.7871.49",
+    "mode": "development build with real cached DEM, 2789 buildings and player; headless desktop Chrome; DPR1; no device CPU throttling",
+    "realDevicesTested": false
+  },
+  "durationSeconds": 180,
+  "runs": [
+    {
+      "referenceStats": {
+        "fps": 120,
+        "calls": 73,
+        "triangles": 359616,
+        "geometries": 73,
+        "textures": 1,
+        "heapMB": 75
+      },
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "readyMs": 2460,
+      "initial": {
+        "stats": {
+          "fps": 116,
+          "calls": 14,
+          "triangles": 358462,
+          "geometries": 14,
+          "textures": 0,
+          "heapMB": 80
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:5173/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 41.30000001192093,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.4000000059604645,
+          "domainLookupStart": 0.4000000059604645,
+          "domainLookupEnd": 0.4000000059604645,
+          "connectStart": 0.4000000059604645,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.4000000059604645,
+          "requestStart": 0.699999988079071,
+          "responseStart": 1.5,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 1.5,
+          "responseEnd": 1.699999988079071,
+          "transferSize": 1136,
+          "encodedBodySize": 836,
+          "decodedBodySize": 836,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 5.699999988079071,
+          "domContentLoadedEventStart": 40.900000005960464,
+          "domContentLoadedEventEnd": 40.900000005960464,
+          "domComplete": 41.30000001192093,
+          "loadEventStart": 41.30000001192093,
+          "loadEventEnd": 41.30000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "name": "/@vite/client",
+            "encoded": 179008,
+            "decoded": 179008,
+            "transfer": 179308,
+            "duration": 5.4000000059604645
+          },
+          {
+            "name": "/src/main.tsx?t=1790142208057",
+            "encoded": 3464,
+            "decoded": 3464,
+            "transfer": 3764,
+            "duration": 5.4000000059604645
+          },
+          {
+            "name": "/@react-refresh",
+            "encoded": 113132,
+            "decoded": 113132,
+            "transfer": 113432,
+            "duration": 7
+          },
+          {
+            "name": "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=90bf2727",
+            "encoded": 12785,
+            "decoded": 12785,
+            "transfer": 13085,
+            "duration": 2.4000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/react.js?v=90bf2727",
+            "encoded": 1024,
+            "decoded": 1024,
+            "transfer": 1324,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/react-dom_client.js?v=90bf2727",
+            "encoded": 1113340,
+            "decoded": 1113340,
+            "transfer": 1113640,
+            "duration": 6.300000011920929
+          },
+          {
+            "name": "/src/style.css",
+            "encoded": 23660,
+            "decoded": 23660,
+            "transfer": 23960,
+            "duration": 6.5999999940395355
+          },
+          {
+            "name": "/node_modules/vite/dist/client/env.mjs",
+            "encoded": 3478,
+            "decoded": 3478,
+            "transfer": 3778,
+            "duration": 6.300000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-2XCFYVCW.js?v=90bf2727",
+            "encoded": 47306,
+            "decoded": 47306,
+            "transfer": 47606,
+            "duration": 0.800000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PX6F3LHL.js?v=90bf2727",
+            "encoded": 8336,
+            "decoded": 8336,
+            "transfer": 8636,
+            "duration": 0.4000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PW32YM6A.js?v=90bf2727",
+            "encoded": 16922,
+            "decoded": 16922,
+            "transfer": 17222,
+            "duration": 0.5
+          },
+          {
+            "name": "/src/game/MapReview.tsx?t=1790142208057",
+            "encoded": 56203,
+            "decoded": 56203,
+            "transfer": 56503,
+            "duration": 0.7999999821186066
+          },
+          {
+            "name": "/favicon.svg",
+            "encoded": 244,
+            "decoded": 244,
+            "transfer": 544,
+            "duration": 2.300000011920929
+          },
+          {
+            "name": "/src/game/data/loadWorld.ts?t=1790141885673",
+            "encoded": 7171,
+            "decoded": 7171,
+            "transfer": 7471,
+            "duration": 1.100000023841858
+          },
+          {
+            "name": "/src/game/world/MapScene.tsx?t=1790142208057",
+            "encoded": 51559,
+            "decoded": 51559,
+            "transfer": 51859,
+            "duration": 1.300000011920929
+          },
+          {
+            "name": "/src/game/world/layers.ts?t=1790142110554",
+            "encoded": 27942,
+            "decoded": 27942,
+            "transfer": 28242,
+            "duration": 1.600000023841858
+          },
+          {
+            "name": "/src/game/geo/geoConfig.ts",
+            "encoded": 862,
+            "decoded": 862,
+            "transfer": 1162,
+            "duration": 1.800000011920929
+          },
+          {
+            "name": "/src/game/ui/map.css?t=1790141885768",
+            "encoded": 9607,
+            "decoded": 9607,
+            "transfer": 9907,
+            "duration": 1.9000000059604645
+          },
+          {
+            "name": "/src/game/world/terrain.ts?t=1790141885566",
+            "encoded": 32467,
+            "decoded": 32467,
+            "transfer": 32767,
+            "duration": 1
+          },
+          {
+            "name": "/src/game/camera/mapCamera.ts",
+            "encoded": 8379,
+            "decoded": 8379,
+            "transfer": 8679,
+            "duration": 2.5999999940395355
+          },
+          {
+            "name": "/src/game/geo/coordinates.ts",
+            "encoded": 3763,
+            "decoded": 3763,
+            "transfer": 4063,
+            "duration": 2.7000000178813934
+          },
+          {
+            "name": "/node_modules/.vite/deps/three.js?v=90bf2727",
+            "encoded": 63554,
+            "decoded": 63554,
+            "transfer": 63854,
+            "duration": 2.4000000059604645
+          },
+          {
+            "name": "/src/game/world/qaRoute.ts?t=1790141885576",
+            "encoded": 1322,
+            "decoded": 1322,
+            "transfer": 1622,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/src/game/world/player.ts?t=1790141885576",
+            "encoded": 16810,
+            "decoded": 16810,
+            "transfer": 17110,
+            "duration": 3.300000011920929
+          },
+          {
+            "name": "/src/game/world/geometry.ts?t=1790141885576",
+            "encoded": 8803,
+            "decoded": 8803,
+            "transfer": 9103,
+            "duration": 4.300000011920929
+          },
+          {
+            "name": "/src/game/world/roads.ts?t=1790141885576",
+            "encoded": 20640,
+            "decoded": 20640,
+            "transfer": 20940,
+            "duration": 3.600000023841858
+          },
+          {
+            "name": "/src/game/world/buildings.ts?t=1790141885576",
+            "encoded": 8230,
+            "decoded": 8230,
+            "transfer": 8530,
+            "duration": 3.800000011920929
+          },
+          {
+            "name": "/data/dongao/controls.json?import&t=1790128360575",
+            "encoded": 2601,
+            "decoded": 2601,
+            "transfer": 2901,
+            "duration": 3.9000000059604645
+          },
+          {
+            "name": "/data/dongao/config.json?import",
+            "encoded": 386,
+            "decoded": 386,
+            "transfer": 686,
+            "duration": 4.100000023841858
+          },
+          {
+            "name": "/src/game/geo/projection.ts",
+            "encoded": 4891,
+            "decoded": 4891,
+            "transfer": 5191,
+            "duration": 1.4000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_controls_OrbitControls__js.js?v=90bf2727",
+            "encoded": 30283,
+            "decoded": 30283,
+            "transfer": 30583,
+            "duration": 4.300000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-IT3TP6RZ.js?v=90bf2727",
+            "encoded": 1618711,
+            "decoded": 1618711,
+            "transfer": 1619011,
+            "duration": 5.800000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_utils_BufferGeometryUtils__js.js?v=90bf2727",
+            "encoded": 28558,
+            "decoded": 28558,
+            "transfer": 28858,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 0,
+            "decoded": 0,
+            "transfer": 0,
+            "duration": 2.0999999940395355
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 2122743,
+            "decoded": 2122743,
+            "transfer": 2123043,
+            "duration": 24.299999982118607
+          },
+          {
+            "name": "/data/dongao/dem/terrain.f32",
+            "encoded": 2231712,
+            "decoded": 2231712,
+            "transfer": 2232012,
+            "duration": 3.5
+          },
+          {
+            "name": "/src/game/ui/DebugPanel.tsx?t=1790141885676",
+            "encoded": 20004,
+            "decoded": 20004,
+            "transfer": 20304,
+            "duration": 0.8999999761581421
+          },
+          {
+            "name": "/data/dongao/reference/sentinel-20250320.png",
+            "encoded": 127928,
+            "decoded": 127928,
+            "transfer": 128228,
+            "duration": 4.300000011920929
+          }
+        ]
+      },
+      "baselineHeapMB": 18.38979721069336,
+      "endHeapMB": 17.648330688476562,
+      "heapChangeMB": -0.7414665222167969,
+      "samples": [
+        {
+          "seconds": 5.007,
+          "heapMB": 18.415924072265625,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -97.99188873099556,
+            "z": -3.134118284094041,
+            "longitude": 121.15600535907483,
+            "latitude": 27.82552828201802,
+            "y": 6.008329886039613,
+            "raw": 5.941672166233925,
+            "slope": 6.676426578159988,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 15.502318243048757
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 10.016,
+          "heapMB": 21.283218383789062,
+          "stats": {
+            "fps": 122,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 72
+          },
+          "player": {
+            "x": -94.77232722534964,
+            "z": 12.551677441700823,
+            "longitude": 121.15603803838815,
+            "latitude": 27.82538673472557,
+            "y": 6.411010420537173,
+            "raw": 6.42715038404951,
+            "slope": 6.166342396397542,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 31.515118243048676
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 15.025,
+          "heapMB": 15.87942886352539,
+          "stats": {
+            "fps": 128,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -91.54813325710546,
+            "z": 28.26004265774859,
+            "longitude": 121.15607076472206,
+            "latitude": 27.825244983767952,
+            "y": 6.698387813708645,
+            "raw": 6.7549197238837015,
+            "slope": 6.025454323626119,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 47.550958243048555
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 20.037,
+          "heapMB": 15.739566802978516,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 70
+          },
+          "player": {
+            "x": -88.94576001445601,
+            "z": 43.42379784077619,
+            "longitude": 121.15609717942804,
+            "latitude": 27.825108147325157,
+            "y": 6.175843988583349,
+            "raw": 6.0243793526601195,
+            "slope": 2.074417841806293,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 62.94733745172793
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 25.044,
+          "heapMB": 20.868778228759766,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 75
+          },
+          "player": {
+            "x": -86.92843982857231,
+            "z": 59.3222421393241,
+            "longitude": 121.15611765570667,
+            "latitude": 27.824964681109993,
+            "y": 5.625594145901578,
+            "raw": 5.238978978817512,
+            "slope": 4.738779580818672,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 78.97325745172826
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 30.052,
+          "heapMB": 19.504440307617188,
+          "stats": {
+            "fps": 122,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 73
+          },
+          "player": {
+            "x": -84.91289201321203,
+            "z": 75.20671843505329,
+            "longitude": 121.15613811399531,
+            "latitude": 27.824821340940904,
+            "y": 5.040356454922625,
+            "raw": 4.708371442864379,
+            "slope": 7.529646066532276,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 94.98509745172845
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 35.062,
+          "heapMB": 29.914276123046875,
+          "stats": {
+            "fps": 126,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 86
+          },
+          "player": {
+            "x": -82.89537042158784,
+            "z": 91.10675000664855,
+            "longitude": 121.15615859231823,
+            "latitude": 27.82467786040232,
+            "y": 4.406213335118836,
+            "raw": 4.235045064475441,
+            "slope": 9.96695908843248,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 111.01261745172822
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 40.071,
+          "heapMB": 37.751888275146484,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -78.65315453767047,
+            "z": 103.18827174032684,
+            "longitude": 121.15620165181619,
+            "latitude": 27.82456883777319,
+            "y": 3.7795497233164754,
+            "raw": 3.765546503740696,
+            "slope": 8.70922367433089,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 126.37967594973716
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 45.079,
+          "heapMB": 34.8430061340332,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 66
+          },
+          "player": {
+            "x": -62.89271125858788,
+            "z": 100.25524069234528,
+            "longitude": 121.15636162405559,
+            "latitude": 27.824595305197015,
+            "y": 1.3586580089582936,
+            "raw": 1.326275851745137,
+            "slope": 8.709235026718423,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 142.4107159497371
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 50.085,
+          "heapMB": 19.369186401367188,
+          "stats": {
+            "fps": 130,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 76
+          },
+          "player": {
+            "x": -72.87734209084792,
+            "z": 102.26240511900144,
+            "longitude": 121.15626027768319,
+            "latitude": 27.824577192715182,
+            "y": 2.8878807145607093,
+            "raw": 2.834983214178678,
+            "slope": 9.080002858172996,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 157.78815171059378
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 55.151,
+          "heapMB": 33.87275314331055,
+          "stats": {
+            "fps": 127,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -81.96388178184277,
+            "z": 96.6985258069086,
+            "longitude": 121.15616804714898,
+            "latitude": 27.82462740069098,
+            "y": 4.324331549246127,
+            "raw": 4.20576418205898,
+            "slope": 11.471757900693378,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 173.33607317342285
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 60.16,
+          "heapMB": 35.215511322021484,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 66
+          },
+          "player": {
+            "x": -84.03696148628903,
+            "z": 80.78821633226204,
+            "longitude": 121.15614700489802,
+            "latitude": 27.824770973976488,
+            "y": 4.6939173099317015,
+            "raw": 4.454248590890336,
+            "slope": 7.863323193469705,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 189.38087317342317
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 65.166,
+          "heapMB": 21.647937774658203,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 78
+          },
+          "player": {
+            "x": -86.10607199146088,
+            "z": 64.90836935680899,
+            "longitude": 121.15612600293537,
+            "latitude": 27.824914272370982,
+            "y": 5.4612845927524045,
+            "raw": 5.073672648281425,
+            "slope": 4.176197489946294,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 205.39495317342343
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 70.172,
+          "heapMB": 33.25252914428711,
+          "stats": {
+            "fps": 124,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -88.17588537567079,
+            "z": 49.02312798045754,
+            "longitude": 121.15610499383833,
+            "latitude": 27.825057619444095,
+            "y": 5.990107794602107,
+            "raw": 5.697118300633062,
+            "slope": 3.5972036810971693,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 221.41447317342372
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 75.18,
+          "heapMB": 36.73386001586914,
+          "stats": {
+            "fps": 127,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -90.42788388384427,
+            "z": 33.81483393428711,
+            "longitude": 121.15608213551904,
+            "latitude": 27.82519485780182,
+            "y": 6.522910805370825,
+            "raw": 6.510311647160939,
+            "slope": 6.45473642127016,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 236.79608473332144
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 80.187,
+          "heapMB": 27.79376220703125,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 86
+          },
+          "player": {
+            "x": -93.65473166421808,
+            "z": 18.12400151397566,
+            "longitude": 121.15604938224831,
+            "latitude": 27.825336450544974,
+            "y": 6.623021111921839,
+            "raw": 6.63127283963267,
+            "slope": 5.927191861981139,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 252.81528473332193
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 85.194,
+          "heapMB": 19.870376586914062,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 77
+          },
+          "player": {
+            "x": -96.8803547121147,
+            "z": 2.4391244635402054,
+            "longitude": 121.1560166414089,
+            "latitude": 27.825477989547373,
+            "y": 6.094431966563181,
+            "raw": 6.103620458350886,
+            "slope": 6.785948200940773,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 268.8284047333229
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 90.202,
+          "heapMB": 16.806079864501953,
+          "stats": {
+            "fps": 123,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 76
+          },
+          "player": {
+            "x": -98.71925747923761,
+            "z": -12.782410892057497,
+            "longitude": 121.15599797610942,
+            "latitude": 27.82561534739355,
+            "y": 5.951143930957382,
+            "raw": 5.945881711106544,
+            "slope": 6.219657425711082,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 284.1958616613955
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 95.211,
+          "heapMB": 28.998023986816406,
+          "stats": {
+            "fps": 123,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -98.4669880464472,
+            "z": -8.533106528288123,
+            "longitude": 121.15600053670403,
+            "latitude": 27.82557700203078,
+            "y": 5.924501404882008,
+            "raw": 5.8711495387505455,
+            "slope": 6.676426578160008,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 299.5883904772244
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 100.221,
+          "heapMB": 36.07331848144531,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 72
+          },
+          "player": {
+            "x": -95.99430104539618,
+            "z": 6.5976000905268934,
+            "longitude": 121.15602563506388,
+            "latitude": 27.82544046381543,
+            "y": 6.2038630383512805,
+            "raw": 6.228486432408264,
+            "slope": 6.5446646365830885,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 314.9507686933779
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 105.227,
+          "heapMB": 32.34389114379883,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -92.76907264425758,
+            "z": 22.311306394225205,
+            "longitude": 121.15605837189754,
+            "latitude": 27.82529866466029,
+            "y": 6.737072431944693,
+            "raw": 6.790804535903563,
+            "slope": 5.397989709858742,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 330.9920486933783
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 110.234,
+          "heapMB": 35.27561569213867,
+          "stats": {
+            "fps": 126,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 72
+          },
+          "player": {
+            "x": -89.71492506694256,
+            "z": 37.36092814967935,
+            "longitude": 121.15608937222024,
+            "latitude": 27.82516285814788,
+            "y": 6.361934162300953,
+            "raw": 6.323544124848488,
+            "slope": 3.6077919743737223,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 346.34970708165304
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 115.241,
+          "heapMB": 35.01885223388672,
+          "stats": {
+            "fps": 125,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 74
+          },
+          "player": {
+            "x": -87.69816137557532,
+            "z": 53.25524970521554,
+            "longitude": 121.1561098428503,
+            "latitude": 27.825019429136002,
+            "y": 5.853576257605674,
+            "raw": 5.445007870328986,
+            "slope": 2.8553579623480907,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 362.37146708165335
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 120.246,
+          "heapMB": 16.063926696777344,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -85.68220329405534,
+            "z": 69.1432221668975,
+            "longitude": 121.15613030530324,
+            "latitude": 27.824876057417807,
+            "y": 5.25081733693738,
+            "raw": 4.937060263982282,
+            "slope": 6.517282266314032,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 378.38682708165544
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 125.25,
+          "heapMB": 18.749786376953125,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -83.6647951148106,
+            "z": 85.04262299751804,
+            "longitude": 121.15615078247501,
+            "latitude": 27.824732582570977,
+            "y": 4.622066339448372,
+            "raw": 4.268729551667619,
+            "slope": 9.812392472443195,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 394.4137070816561
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 130.255,
+          "heapMB": 33.681034088134766,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 76
+          },
+          "player": {
+            "x": -81.65085105790858,
+            "z": 100.91472272456377,
+            "longitude": 121.15617122448512,
+            "latitude": 27.824589354086996,
+            "y": 4.329995906882724,
+            "raw": 4.222225809771928,
+            "slope": 11.893379738576584,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 410.4130670816577
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 135.259,
+          "heapMB": 23.726909637451172,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 66
+          },
+          "player": {
+            "x": -68.92548994287975,
+            "z": 101.37712420655942,
+            "longitude": 121.1563003899203,
+            "latitude": 27.824585181415177,
+            "y": 2.233583018706838,
+            "raw": 2.224815848242024,
+            "slope": 8.591722387774722,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 425.78628779341545
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 140.268,
+          "heapMB": 17.519947052001953,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 61
+          },
+          "player": {
+            "x": -66.8275975417639,
+            "z": 101.0646226696993,
+            "longitude": 121.15632168402603,
+            "latitude": 27.824588001402585,
+            "y": 1.927538347930447,
+            "raw": 1.9048203106491153,
+            "slope": 8.591722387774729,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 441.1330292941861
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 145.278,
+          "heapMB": 40.52922058105469,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -81.14528445710202,
+            "z": 102.95115044930412,
+            "longitude": 121.15617635610609,
+            "latitude": 27.824570977535643,
+            "y": 4.252150836137677,
+            "raw": 4.169524314759178,
+            "slope": 13.211842811001599,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 456.53796567694104
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 150.288,
+          "heapMB": 23.10411834716797,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 84
+          },
+          "player": {
+            "x": -83.2170976584747,
+            "z": 87.05777934295227,
+            "longitude": 121.15615532671043,
+            "latitude": 27.824714397970748,
+            "y": 4.491736244343663,
+            "raw": 4.1960160710723375,
+            "slope": 9.812392472443195,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 472.56580567694425
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 155.31,
+          "heapMB": 35.173038482666016,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -85.29205454589987,
+            "z": 71.1402922742931,
+            "longitude": 121.15613426540561,
+            "latitude": 27.824858036026257,
+            "y": 5.1522523286205235,
+            "raw": 4.857579546268468,
+            "slope": 6.042454473801487,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 488.617965676947
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 160.319,
+          "heapMB": 32.377662658691406,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 65
+          },
+          "player": {
+            "x": -87.36692870474465,
+            "z": 55.22343983622111,
+            "longitude": 121.15611320494051,
+            "latitude": 27.825001668354915,
+            "y": 5.796620006613727,
+            "raw": 5.342674337004458,
+            "slope": 2.8553579623480685,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 504.66948567694914
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 165.328,
+          "heapMB": 23.644821166992188,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -89.43894872756832,
+            "z": 39.3284821534017,
+            "longitude": 121.15609217344557,
+            "latitude": 27.825145103107154,
+            "y": 6.308439995648982,
+            "raw": 6.227384105454461,
+            "slope": 3.2184861599216354,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 520.6989256769541
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 170.334,
+          "heapMB": 36.46561050415039,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -92.39695638517064,
+            "z": 24.240358688827786,
+            "longitude": 121.15606214896587,
+            "latitude": 27.825281257055725,
+            "y": 6.733064930756272,
+            "raw": 6.870175665403917,
+            "slope": 6.025454323626147,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 536.078812554967
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 175.344,
+          "heapMB": 26.7305908203125,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -95.62525214838004,
+            "z": 8.542310023505001,
+            "longitude": 121.15602938099777,
+            "latitude": 27.825422914917663,
+            "y": 6.284523238740965,
+            "raw": 6.294406535006908,
+            "slope": 6.498071027939649,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 552.1053725549717
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 180.352,
+          "heapMB": 17.648330688476562,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 79
+          },
+          "player": {
+            "x": -98.3166852657262,
+            "z": -6.567974940957132,
+            "longitude": 121.15600206231292,
+            "latitude": 27.82555926884973,
+            "y": 5.9575977549036025,
+            "raw": 5.832266719254572,
+            "slope": 6.676426578160008,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 567.4762625776159
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 3
+          }
+        }
+      ],
+      "errors": [],
+      "external": [],
+      "arrivalCaptured": true
+    },
+    {
+      "referenceStats": {
+        "fps": 120,
+        "calls": 73,
+        "triangles": 359616,
+        "geometries": 73,
+        "textures": 1,
+        "heapMB": 68
+      },
+      "name": "mobile-portrait",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "readyMs": 2447,
+      "initial": {
+        "stats": {
+          "fps": 118,
+          "calls": 14,
+          "triangles": 358462,
+          "geometries": 14,
+          "textures": 0,
+          "heapMB": 108
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:5173/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 46.900000005960464,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5,
+          "domainLookupStart": 0.5,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5,
+          "requestStart": 0.9000000059604645,
+          "responseStart": 1.9000000059604645,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 1.9000000059604645,
+          "responseEnd": 2.0999999940395355,
+          "transferSize": 1136,
+          "encodedBodySize": 836,
+          "decodedBodySize": 836,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 6.5,
+          "domContentLoadedEventStart": 46.400000005960464,
+          "domContentLoadedEventEnd": 46.400000005960464,
+          "domComplete": 46.900000005960464,
+          "loadEventStart": 46.900000005960464,
+          "loadEventEnd": 46.900000005960464,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "name": "/@vite/client",
+            "encoded": 179008,
+            "decoded": 179008,
+            "transfer": 179308,
+            "duration": 7.5
+          },
+          {
+            "name": "/src/main.tsx?t=1790142208057",
+            "encoded": 3464,
+            "decoded": 3464,
+            "transfer": 3764,
+            "duration": 7
+          },
+          {
+            "name": "/@react-refresh",
+            "encoded": 113132,
+            "decoded": 113132,
+            "transfer": 113432,
+            "duration": 9.599999994039536
+          },
+          {
+            "name": "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=90bf2727",
+            "encoded": 12785,
+            "decoded": 12785,
+            "transfer": 13085,
+            "duration": 2.699999988079071
+          },
+          {
+            "name": "/node_modules/.vite/deps/react.js?v=90bf2727",
+            "encoded": 1024,
+            "decoded": 1024,
+            "transfer": 1324,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/react-dom_client.js?v=90bf2727",
+            "encoded": 1113340,
+            "decoded": 1113340,
+            "transfer": 1113640,
+            "duration": 6.700000017881393
+          },
+          {
+            "name": "/src/style.css",
+            "encoded": 23660,
+            "decoded": 23660,
+            "transfer": 23960,
+            "duration": 7.300000011920929
+          },
+          {
+            "name": "/node_modules/vite/dist/client/env.mjs",
+            "encoded": 3478,
+            "decoded": 3478,
+            "transfer": 3778,
+            "duration": 7.5
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PX6F3LHL.js?v=90bf2727",
+            "encoded": 8336,
+            "decoded": 8336,
+            "transfer": 8636,
+            "duration": 4.0999999940395355
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-2XCFYVCW.js?v=90bf2727",
+            "encoded": 47306,
+            "decoded": 47306,
+            "transfer": 47606,
+            "duration": 3.699999988079071
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PW32YM6A.js?v=90bf2727",
+            "encoded": 16922,
+            "decoded": 16922,
+            "transfer": 17222,
+            "duration": 0.7999999821186066
+          },
+          {
+            "name": "/src/game/MapReview.tsx?t=1790142208057",
+            "encoded": 56203,
+            "decoded": 56203,
+            "transfer": 56503,
+            "duration": 1
+          },
+          {
+            "name": "/favicon.svg",
+            "encoded": 244,
+            "decoded": 244,
+            "transfer": 544,
+            "duration": 0.9000000059604645
+          },
+          {
+            "name": "/src/game/data/loadWorld.ts?t=1790141885673",
+            "encoded": 7171,
+            "decoded": 7171,
+            "transfer": 7471,
+            "duration": 1.199999988079071
+          },
+          {
+            "name": "/src/game/world/MapScene.tsx?t=1790142208057",
+            "encoded": 51559,
+            "decoded": 51559,
+            "transfer": 51859,
+            "duration": 1.800000011920929
+          },
+          {
+            "name": "/src/game/geo/geoConfig.ts",
+            "encoded": 862,
+            "decoded": 862,
+            "transfer": 1162,
+            "duration": 2
+          },
+          {
+            "name": "/src/game/world/layers.ts?t=1790142110554",
+            "encoded": 27942,
+            "decoded": 27942,
+            "transfer": 28242,
+            "duration": 1.9000000059604645
+          },
+          {
+            "name": "/src/game/ui/map.css?t=1790141885768",
+            "encoded": 9607,
+            "decoded": 9607,
+            "transfer": 9907,
+            "duration": 2.2000000178813934
+          },
+          {
+            "name": "/src/game/world/terrain.ts?t=1790141885566",
+            "encoded": 32467,
+            "decoded": 32467,
+            "transfer": 32767,
+            "duration": 0.699999988079071
+          },
+          {
+            "name": "/src/game/camera/mapCamera.ts",
+            "encoded": 8379,
+            "decoded": 8379,
+            "transfer": 8679,
+            "duration": 1.800000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/three.js?v=90bf2727",
+            "encoded": 63554,
+            "decoded": 63554,
+            "transfer": 63854,
+            "duration": 1.7000000178813934
+          },
+          {
+            "name": "/src/game/geo/coordinates.ts",
+            "encoded": 3763,
+            "decoded": 3763,
+            "transfer": 4063,
+            "duration": 1.9000000059604645
+          },
+          {
+            "name": "/src/game/world/qaRoute.ts?t=1790141885576",
+            "encoded": 1322,
+            "decoded": 1322,
+            "transfer": 1622,
+            "duration": 1.9000000059604645
+          },
+          {
+            "name": "/src/game/world/player.ts?t=1790141885576",
+            "encoded": 16810,
+            "decoded": 16810,
+            "transfer": 17110,
+            "duration": 2.2000000178813934
+          },
+          {
+            "name": "/src/game/world/geometry.ts?t=1790141885576",
+            "encoded": 8803,
+            "decoded": 8803,
+            "transfer": 9103,
+            "duration": 2.5
+          },
+          {
+            "name": "/src/game/world/roads.ts?t=1790141885576",
+            "encoded": 20640,
+            "decoded": 20640,
+            "transfer": 20940,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/data/dongao/config.json?import",
+            "encoded": 386,
+            "decoded": 386,
+            "transfer": 686,
+            "duration": 3.2000000178813934
+          },
+          {
+            "name": "/src/game/world/buildings.ts?t=1790141885576",
+            "encoded": 8230,
+            "decoded": 8230,
+            "transfer": 8530,
+            "duration": 3
+          },
+          {
+            "name": "/data/dongao/controls.json?import&t=1790128360575",
+            "encoded": 2601,
+            "decoded": 2601,
+            "transfer": 2901,
+            "duration": 3.0999999940395355
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_controls_OrbitControls__js.js?v=90bf2727",
+            "encoded": 30283,
+            "decoded": 30283,
+            "transfer": 30583,
+            "duration": 6.200000017881393
+          },
+          {
+            "name": "/src/game/geo/projection.ts",
+            "encoded": 4891,
+            "decoded": 4891,
+            "transfer": 5191,
+            "duration": 1.4000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-IT3TP6RZ.js?v=90bf2727",
+            "encoded": 1618711,
+            "decoded": 1618711,
+            "transfer": 1619011,
+            "duration": 5.300000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_utils_BufferGeometryUtils__js.js?v=90bf2727",
+            "encoded": 28558,
+            "decoded": 28558,
+            "transfer": 28858,
+            "duration": 5.4000000059604645
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 0,
+            "decoded": 0,
+            "transfer": 0,
+            "duration": 1
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 2122743,
+            "decoded": 2122743,
+            "transfer": 2123043,
+            "duration": 4.799999982118607
+          },
+          {
+            "name": "/data/dongao/dem/terrain.f32",
+            "encoded": 2231712,
+            "decoded": 2231712,
+            "transfer": 2232012,
+            "duration": 3.4000000059604645
+          },
+          {
+            "name": "/src/game/ui/DebugPanel.tsx?t=1790141885676",
+            "encoded": 20004,
+            "decoded": 20004,
+            "transfer": 20304,
+            "duration": 0.800000011920929
+          },
+          {
+            "name": "/data/dongao/reference/sentinel-20250320.png",
+            "encoded": 127928,
+            "decoded": 127928,
+            "transfer": 128228,
+            "duration": 4.300000011920929
+          }
+        ]
+      },
+      "baselineHeapMB": 42.82612609863281,
+      "endHeapMB": 35.256107330322266,
+      "heapChangeMB": -7.570018768310547,
+      "samples": [
+        {
+          "seconds": 5.005,
+          "heapMB": 40.427406311035156,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 126
+          },
+          "player": {
+            "x": -98.00330449915229,
+            "z": -3.190023256142064,
+            "longitude": 121.15600524320207,
+            "latitude": 27.825528786499753,
+            "y": 6.0082039141178765,
+            "raw": 5.940153530989219,
+            "slope": 6.676426578160014,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 15.445255516843138
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 10.01,
+          "heapMB": 36.73024368286133,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 124
+          },
+          "player": {
+            "x": -94.78067668391799,
+            "z": 12.510823311800452,
+            "longitude": 121.15603795363916,
+            "latitude": 27.82538710338978,
+            "y": 6.409867415640608,
+            "raw": 6.425724029000497,
+            "slope": 6.166342396397564,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 31.473415516842984
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 15.015,
+          "heapMB": 17.665508270263672,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 79
+          },
+          "player": {
+            "x": -91.55837056527831,
+            "z": 28.210102553580338,
+            "longitude": 121.15607066081095,
+            "latitude": 27.825245434423223,
+            "y": 6.698786354773919,
+            "raw": 6.7568666490654286,
+            "slope": 6.025454323626117,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 47.499975516842795
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 20.019,
+          "heapMB": 18.474788665771484,
+          "stats": {
+            "fps": 128,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 78
+          },
+          "player": {
+            "x": -88.95850120410022,
+            "z": 43.32273592336914,
+            "longitude": 121.15609705010195,
+            "latitude": 27.825109059299344,
+            "y": 6.178847210827961,
+            "raw": 6.029715809705402,
+            "slope": 2.0744178418063286,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 62.84547489086351
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 25.023,
+          "heapMB": 17.862010955810547,
+          "stats": {
+            "fps": 127,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -86.94321631487865,
+            "z": 59.205310186431255,
+            "longitude": 121.15611750572182,
+            "latitude": 27.824965736294036,
+            "y": 5.632231003978795,
+            "raw": 5.242062533819476,
+            "slope": 4.794776110399901,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 78.85539489086379
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 30.031,
+          "heapMB": 18.467235565185547,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -84.92418531834971,
+            "z": 75.11740773318657,
+            "longitude": 121.15613799936558,
+            "latitude": 27.824822146873114,
+            "y": 5.046241651354938,
+            "raw": 4.711971429794666,
+            "slope": 7.412700364975906,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 94.89507489086417
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 35.037,
+          "heapMB": 26.985015869140625,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -82.90998800866929,
+            "z": 90.99141072033771,
+            "longitude": 121.15615844394627,
+            "latitude": 27.824678901214277,
+            "y": 4.403979760176567,
+            "raw": 4.234725738318835,
+            "slope": 9.9669590884325,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 110.89635489086389
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 40.042,
+          "heapMB": 24.667888641357422,
+          "stats": {
+            "fps": 126,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -78.7542430422514,
+            "z": 103.20349759412,
+            "longitude": 121.15620062574388,
+            "latitude": 27.824568700376375,
+            "y": 3.7951467921327016,
+            "raw": 3.7821350353646164,
+            "slope": 8.709223674330914,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 126.27326106817478
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 45.047,
+          "heapMB": 34.102046966552734,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 73
+          },
+          "player": {
+            "x": -62.99734494422628,
+            "z": 100.27415554122521,
+            "longitude": 121.15636056199885,
+            "latitude": 27.82459513451102,
+            "y": 1.3738454087783933,
+            "raw": 1.3415134625320633,
+            "slope": 8.705491805655468,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 142.30014106817475
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 50.054,
+          "heapMB": 40.00273513793945,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -72.75149398641494,
+            "z": 102.23747436299944,
+            "longitude": 121.15626155507131,
+            "latitude": 27.824577417688214,
+            "y": 2.868408759293713,
+            "raw": 2.8151584312179514,
+            "slope": 9.16993108666724,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 157.65747833632045
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 55.111,
+          "heapMB": 19.43359375,
+          "stats": {
+            "fps": 123,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 81
+          },
+          "player": {
+            "x": -81.94339184132552,
+            "z": 96.84125594941176,
+            "longitude": 121.15616825512674,
+            "latitude": 27.82462611270626,
+            "y": 4.321484046222214,
+            "raw": 4.205047058398837,
+            "slope": 11.471757900693378,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 173.18727113817215
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 60.117,
+          "heapMB": 31.329429626464844,
+          "stats": {
+            "fps": 128,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 70
+          },
+          "player": {
+            "x": -84.01390728967507,
+            "z": 80.9544925335187,
+            "longitude": 121.15614723890359,
+            "latitude": 27.824769473514127,
+            "y": 4.69174367951218,
+            "raw": 4.446434098929173,
+            "slope": 7.869806082738024,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 189.2083911381719
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 65.122,
+          "heapMB": 18.691650390625,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 84
+          },
+          "player": {
+            "x": -86.08218952917629,
+            "z": 65.08486420380126,
+            "longitude": 121.15612624534803,
+            "latitude": 27.82491267969643,
+            "y": 5.45691540510303,
+            "raw": 5.0680062783281095,
+            "slope": 4.2089010237926825,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 205.21223113817172
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 70.126,
+          "heapMB": 30.270183563232422,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 71
+          },
+          "player": {
+            "x": -88.15349073619484,
+            "z": 49.192071776106005,
+            "longitude": 121.15610522114923,
+            "latitude": 27.825056094909588,
+            "y": 5.981134376225805,
+            "raw": 5.6867710209278135,
+            "slope": 3.6196304562552064,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 221.23943113817205
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 75.131,
+          "heapMB": 21.04483413696289,
+          "stats": {
+            "fps": 123,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 61
+          },
+          "player": {
+            "x": -90.38598752631165,
+            "z": 34.01786393071524,
+            "longitude": 121.15608256077702,
+            "latitude": 27.825193025676324,
+            "y": 6.511130602716179,
+            "raw": 6.500133374539871,
+            "slope": 6.284207794449361,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 236.5841621070039
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 80.136,
+          "heapMB": 38.68979263305664,
+          "stats": {
+            "fps": 127,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -93.61424577174485,
+            "z": 18.3204609433674,
+            "longitude": 121.15604979318972,
+            "latitude": 27.825334677711716,
+            "y": 6.631348205084221,
+            "raw": 6.638650017455185,
+            "slope": 5.927191861981201,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 252.61008210700479
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 85.139,
+          "heapMB": 40.106807708740234,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -96.8399900483761,
+            "z": 2.635282127192476,
+            "longitude": 121.15601705111982,
+            "latitude": 27.825476219437228,
+            "y": 6.099405747742671,
+            "raw": 6.1094617226122985,
+            "slope": 6.785948200940773,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 268.62352210700675
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 90.143,
+          "heapMB": 19.793678283691406,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 61
+          },
+          "player": {
+            "x": -98.70535987828926,
+            "z": -12.568121703659292,
+            "longitude": 121.15599811717337,
+            "latitude": 27.825613413666062,
+            "y": 5.947487295442209,
+            "raw": 5.942009748054482,
+            "slope": 6.219657425711082,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 283.9765039290787
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 95.147,
+          "heapMB": 34.63045883178711,
+          "stats": {
+            "fps": 127,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 77
+          },
+          "player": {
+            "x": -98.48443335327464,
+            "z": -8.81248082820064,
+            "longitude": 121.15600035963003,
+            "latitude": 27.82557952308081,
+            "y": 5.919348172882256,
+            "raw": 5.876199241122238,
+            "slope": 6.676426578159983,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 299.3177705861731
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 100.151,
+          "heapMB": 25.446338653564453,
+          "stats": {
+            "fps": 125,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -96.05600587439451,
+            "z": 6.2976371303392265,
+            "longitude": 121.15602500874523,
+            "latitude": 27.825443170655785,
+            "y": 6.191884804178731,
+            "raw": 6.218957566927948,
+            "slope": 6.591887082874567,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 314.6538361475803
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 105.158,
+          "heapMB": 20.438880920410156,
+          "stats": {
+            "fps": 125,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 76
+          },
+          "player": {
+            "x": -92.82903739187748,
+            "z": 22.01947972504936,
+            "longitude": 121.15605776324112,
+            "latitude": 27.82530129807944,
+            "y": 6.732424494068945,
+            "raw": 6.779250753987906,
+            "slope": 5.2727645799246385,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 330.70343614758195
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 110.163,
+          "heapMB": 37.01415252685547,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 70
+          },
+          "player": {
+            "x": -89.75468369034716,
+            "z": 37.047233719944,
+            "longitude": 121.15608896866077,
+            "latitude": 27.825165688899855,
+            "y": 6.370445750573295,
+            "raw": 6.33781215204943,
+            "slope": 3.760769946807257,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 346.04281600448445
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 115.169,
+          "heapMB": 27.390026092529297,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -87.73946111562358,
+            "z": 52.929493324116265,
+            "longitude": 121.15610942364813,
+            "latitude": 27.825022368734,
+            "y": 5.8623935833475045,
+            "raw": 5.466063392639199,
+            "slope": 2.855357962348057,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 362.05241600448517
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 120.177,
+          "heapMB": 16.559043884277344,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 75
+          },
+          "player": {
+            "x": -85.71956602803438,
+            "z": 68.84857767572159,
+            "longitude": 121.15612992606262,
+            "latitude": 27.824878716264745,
+            "y": 5.269002322675473,
+            "raw": 4.9473495069430475,
+            "slope": 6.584249005662916,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 378.09913600448647
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 125.184,
+          "heapMB": 37.01538848876953,
+          "stats": {
+            "fps": 125,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 71
+          },
+          "player": {
+            "x": -83.70394065047739,
+            "z": 84.73401182708608,
+            "longitude": 121.15615038513853,
+            "latitude": 27.82473536745205,
+            "y": 4.636999023747997,
+            "raw": 4.283813234060958,
+            "slope": 9.812392472443221,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 394.1119360044871
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 130.191,
+          "heapMB": 24.862293243408203,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -81.68662350102039,
+            "z": 100.6327790766593,
+            "longitude": 121.15617086138633,
+            "latitude": 27.824591898322602,
+            "y": 4.325682402203242,
+            "raw": 4.223691805757748,
+            "slope": 11.633496391814292,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 410.13817600448834
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 135.197,
+          "heapMB": 18.71291732788086,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -69.21462288343841,
+            "z": 101.43066103165994,
+            "longitude": 121.15629745515234,
+            "latitude": 27.8245846983034,
+            "y": 2.2755208865140664,
+            "raw": 2.268981218144953,
+            "slope": 8.805959653460656,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 425.50096154082183
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 140.204,
+          "heapMB": 20.989219665527344,
+          "stats": {
+            "fps": 128,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 86
+          },
+          "player": {
+            "x": -66.54996987122762,
+            "z": 101.0096789319348,
+            "longitude": 121.15632450201277,
+            "latitude": 27.82458849721022,
+            "y": 1.8873508647295958,
+            "raw": 1.8632540838922345,
+            "slope": 8.591722387774718,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 440.86540305106024
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 145.213,
+          "heapMB": 21.92105484008789,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -81.10716546958676,
+            "z": 103.26780856480711,
+            "longitude": 121.15617674302287,
+            "latitude": 27.824568120039622,
+            "y": 4.24610710792105,
+            "raw": 4.167357615646169,
+            "slope": 13.211842811001599,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 456.2378005339173
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 150.22,
+          "heapMB": 24.139198303222656,
+          "stats": {
+            "fps": 128,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 83
+          },
+          "player": {
+            "x": -83.17781827227351,
+            "z": 87.37751328434352,
+            "longitude": 121.15615572540553,
+            "latitude": 27.824711512718736,
+            "y": 4.47648357759177,
+            "raw": 4.197844092104798,
+            "slope": 9.812392472443221,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 472.26244053391895
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 155.226,
+          "heapMB": 41.59596633911133,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 79
+          },
+          "player": {
+            "x": -85.24714789486399,
+            "z": 71.49737215546637,
+            "longitude": 121.15613472121878,
+            "latitude": 27.824854813767647,
+            "y": 5.14215966791338,
+            "raw": 4.844234460122555,
+            "slope": 6.042454473801487,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 488.27684053392176
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 160.234,
+          "heapMB": 33.265228271484375,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -87.31647751745427,
+            "z": 55.61723102658892,
+            "longitude": 121.15611371703204,
+            "latitude": 27.824998114816555,
+            "y": 5.785937460541437,
+            "raw": 5.330646978983613,
+            "slope": 2.85535796234808,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 504.29124053392485
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 165.241,
+          "heapMB": 33.054969787597656,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 70
+          },
+          "player": {
+            "x": -89.38733706703056,
+            "z": 39.72534915993982,
+            "longitude": 121.15609269731617,
+            "latitude": 27.825141521812892,
+            "y": 6.290422517779499,
+            "raw": 6.207974820044919,
+            "slope": 3.2722562684870247,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 520.3174805339293
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 170.25,
+          "heapMB": 22.830402374267578,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 67
+          },
+          "player": {
+            "x": -92.31631438363391,
+            "z": 24.632445139634815,
+            "longitude": 121.15606296750133,
+            "latitude": 27.825277718900793,
+            "y": 6.729907924682388,
+            "raw": 6.885649424482038,
+            "slope": 6.025454323626093,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 535.6972828535766
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 175.255,
+          "heapMB": 17.20734405517578,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -95.544808610374,
+            "z": 8.93345719842344,
+            "longitude": 121.15603019751877,
+            "latitude": 27.825419385238675,
+            "y": 6.300144480474018,
+            "raw": 6.307264591370451,
+            "slope": 6.498071027939637,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 551.7248028535843
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 180.261,
+          "heapMB": 35.256107330322266,
+          "stats": {
+            "fps": 120,
+            "calls": 11,
+            "triangles": 356388,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 77
+          },
+          "player": {
+            "x": -98.29069244092285,
+            "z": -6.166408187806362,
+            "longitude": 121.15600232614626,
+            "latitude": 27.825555645145354,
+            "y": 5.964900121067251,
+            "raw": 5.824829248136554,
+            "slope": 6.676426578159993,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 567.0926207623143
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 3
+          }
+        }
+      ],
+      "errors": [],
+      "external": [],
+      "arrivalCaptured": true
+    },
+    {
+      "referenceStats": {
+        "fps": 120,
+        "calls": 73,
+        "triangles": 359616,
+        "geometries": 73,
+        "textures": 1,
+        "heapMB": 65
+      },
+      "name": "mobile-landscape",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "readyMs": 2448,
+      "initial": {
+        "stats": {
+          "fps": 117,
+          "calls": 14,
+          "triangles": 358462,
+          "geometries": 14,
+          "textures": 0,
+          "heapMB": 108
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:5173/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 45.70000001788139,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000001788139343,
+          "domainLookupStart": 0.20000001788139343,
+          "domainLookupEnd": 0.20000001788139343,
+          "connectStart": 0.20000001788139343,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.20000001788139343,
+          "requestStart": 0.6000000238418579,
+          "responseStart": 2.300000011920929,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.300000011920929,
+          "responseEnd": 2.5,
+          "transferSize": 1136,
+          "encodedBodySize": 836,
+          "decodedBodySize": 836,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 7.5,
+          "domContentLoadedEventStart": 45.20000001788139,
+          "domContentLoadedEventEnd": 45.20000001788139,
+          "domComplete": 45.70000001788139,
+          "loadEventStart": 45.70000001788139,
+          "loadEventEnd": 45.70000001788139,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "name": "/@vite/client",
+            "encoded": 179008,
+            "decoded": 179008,
+            "transfer": 179308,
+            "duration": 7.199999988079071
+          },
+          {
+            "name": "/src/main.tsx?t=1790142208057",
+            "encoded": 3464,
+            "decoded": 3464,
+            "transfer": 3764,
+            "duration": 7.5
+          },
+          {
+            "name": "/@react-refresh",
+            "encoded": 113132,
+            "decoded": 113132,
+            "transfer": 113432,
+            "duration": 9.400000005960464
+          },
+          {
+            "name": "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=90bf2727",
+            "encoded": 12785,
+            "decoded": 12785,
+            "transfer": 13085,
+            "duration": 2.199999988079071
+          },
+          {
+            "name": "/node_modules/.vite/deps/react.js?v=90bf2727",
+            "encoded": 1024,
+            "decoded": 1024,
+            "transfer": 1324,
+            "duration": 2.2999999821186066
+          },
+          {
+            "name": "/src/style.css",
+            "encoded": 23660,
+            "decoded": 23660,
+            "transfer": 23960,
+            "duration": 6
+          },
+          {
+            "name": "/node_modules/.vite/deps/react-dom_client.js?v=90bf2727",
+            "encoded": 1113340,
+            "decoded": 1113340,
+            "transfer": 1113640,
+            "duration": 6.9000000059604645
+          },
+          {
+            "name": "/node_modules/vite/dist/client/env.mjs",
+            "encoded": 3478,
+            "decoded": 3478,
+            "transfer": 3778,
+            "duration": 6.9000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-2XCFYVCW.js?v=90bf2727",
+            "encoded": 47306,
+            "decoded": 47306,
+            "transfer": 47606,
+            "duration": 2.0999999940395355
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PX6F3LHL.js?v=90bf2727",
+            "encoded": 8336,
+            "decoded": 8336,
+            "transfer": 8636,
+            "duration": 2.9000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-PW32YM6A.js?v=90bf2727",
+            "encoded": 16922,
+            "decoded": 16922,
+            "transfer": 17222,
+            "duration": 0.699999988079071
+          },
+          {
+            "name": "/src/game/MapReview.tsx?t=1790142208057",
+            "encoded": 56203,
+            "decoded": 56203,
+            "transfer": 56503,
+            "duration": 1
+          },
+          {
+            "name": "/favicon.svg",
+            "encoded": 244,
+            "decoded": 244,
+            "transfer": 544,
+            "duration": 1.199999988079071
+          },
+          {
+            "name": "/src/game/data/loadWorld.ts?t=1790141885673",
+            "encoded": 7171,
+            "decoded": 7171,
+            "transfer": 7471,
+            "duration": 1.0999999940395355
+          },
+          {
+            "name": "/src/game/world/MapScene.tsx?t=1790142208057",
+            "encoded": 51559,
+            "decoded": 51559,
+            "transfer": 51859,
+            "duration": 2.300000011920929
+          },
+          {
+            "name": "/src/game/geo/geoConfig.ts",
+            "encoded": 862,
+            "decoded": 862,
+            "transfer": 1162,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/src/game/world/layers.ts?t=1790142110554",
+            "encoded": 27942,
+            "decoded": 27942,
+            "transfer": 28242,
+            "duration": 2.800000011920929
+          },
+          {
+            "name": "/src/game/ui/map.css?t=1790141885768",
+            "encoded": 9607,
+            "decoded": 9607,
+            "transfer": 9907,
+            "duration": 3.2000000178813934
+          },
+          {
+            "name": "/src/game/world/terrain.ts?t=1790141885566",
+            "encoded": 32467,
+            "decoded": 32467,
+            "transfer": 32767,
+            "duration": 1
+          },
+          {
+            "name": "/node_modules/.vite/deps/three.js?v=90bf2727",
+            "encoded": 63554,
+            "decoded": 63554,
+            "transfer": 63854,
+            "duration": 3.4000000059604645
+          },
+          {
+            "name": "/src/game/camera/mapCamera.ts",
+            "encoded": 8379,
+            "decoded": 8379,
+            "transfer": 8679,
+            "duration": 3.5
+          },
+          {
+            "name": "/src/game/geo/coordinates.ts",
+            "encoded": 3763,
+            "decoded": 3763,
+            "transfer": 4063,
+            "duration": 3.5
+          },
+          {
+            "name": "/src/game/world/qaRoute.ts?t=1790141885576",
+            "encoded": 1322,
+            "decoded": 1322,
+            "transfer": 1622,
+            "duration": 3.800000011920929
+          },
+          {
+            "name": "/src/game/world/player.ts?t=1790141885576",
+            "encoded": 16810,
+            "decoded": 16810,
+            "transfer": 17110,
+            "duration": 4
+          },
+          {
+            "name": "/data/dongao/config.json?import",
+            "encoded": 386,
+            "decoded": 386,
+            "transfer": 686,
+            "duration": 1.300000011920929
+          },
+          {
+            "name": "/src/game/world/geometry.ts?t=1790141885576",
+            "encoded": 8803,
+            "decoded": 8803,
+            "transfer": 9103,
+            "duration": 4.300000011920929
+          },
+          {
+            "name": "/src/game/world/roads.ts?t=1790141885576",
+            "encoded": 20640,
+            "decoded": 20640,
+            "transfer": 20940,
+            "duration": 4.5999999940395355
+          },
+          {
+            "name": "/data/dongao/controls.json?import&t=1790128360575",
+            "encoded": 2601,
+            "decoded": 2601,
+            "transfer": 2901,
+            "duration": 4.800000011920929
+          },
+          {
+            "name": "/src/game/world/buildings.ts?t=1790141885576",
+            "encoded": 8230,
+            "decoded": 8230,
+            "transfer": 8530,
+            "duration": 4.9000000059604645
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_controls_OrbitControls__js.js?v=90bf2727",
+            "encoded": 30283,
+            "decoded": 30283,
+            "transfer": 30583,
+            "duration": 4.300000011920929
+          },
+          {
+            "name": "/node_modules/.vite/deps/chunk-IT3TP6RZ.js?v=90bf2727",
+            "encoded": 1618711,
+            "decoded": 1618711,
+            "transfer": 1619011,
+            "duration": 5.9000000059604645
+          },
+          {
+            "name": "/src/game/geo/projection.ts",
+            "encoded": 4891,
+            "decoded": 4891,
+            "transfer": 5191,
+            "duration": 5
+          },
+          {
+            "name": "/node_modules/.vite/deps/three_addons_utils_BufferGeometryUtils__js.js?v=90bf2727",
+            "encoded": 28558,
+            "decoded": 28558,
+            "transfer": 28858,
+            "duration": 3.800000011920929
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 0,
+            "decoded": 0,
+            "transfer": 0,
+            "duration": 1.100000023841858
+          },
+          {
+            "name": "/data/dongao/world.json",
+            "encoded": 2122743,
+            "decoded": 2122743,
+            "transfer": 2123043,
+            "duration": 4.5999999940395355
+          },
+          {
+            "name": "/data/dongao/dem/terrain.f32",
+            "encoded": 2231712,
+            "decoded": 2231712,
+            "transfer": 2232012,
+            "duration": 4.0999999940395355
+          },
+          {
+            "name": "/src/game/ui/DebugPanel.tsx?t=1790141885676",
+            "encoded": 20004,
+            "decoded": 20004,
+            "transfer": 20304,
+            "duration": 1
+          },
+          {
+            "name": "/data/dongao/reference/sentinel-20250320.png",
+            "encoded": 127928,
+            "decoded": 127928,
+            "transfer": 128228,
+            "duration": 1.7999999821186066
+          }
+        ]
+      },
+      "baselineHeapMB": 43.93147277832031,
+      "endHeapMB": 36.348575592041016,
+      "heapChangeMB": -7.582897186279297,
+      "samples": [
+        {
+          "seconds": 5.004,
+          "heapMB": 42.05939865112305,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 127
+          },
+          "player": {
+            "x": -97.99741680495893,
+            "z": -3.161664779715077,
+            "longitude": 121.15600530296356,
+            "latitude": 27.825528530595264,
+            "y": 6.0082567454925915,
+            "raw": 5.940912753285038,
+            "slope": 6.676426578160038,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 15.474213947130274
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 10.014,
+          "heapMB": 38.802452087402344,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 125
+          },
+          "player": {
+            "x": -94.77494272788039,
+            "z": 12.538560001254337,
+            "longitude": 121.15603801184018,
+            "latitude": 27.82538685309624,
+            "y": 6.410637093073144,
+            "raw": 6.4266861894128,
+            "slope": 6.166342396397509,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 31.50173394713018
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 15.022,
+          "heapMB": 37.813724517822266,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 73
+          },
+          "player": {
+            "x": -91.55285468371616,
+            "z": 28.236903990212575,
+            "longitude": 121.15607071679847,
+            "latitude": 27.825245192569326,
+            "y": 6.698570185950692,
+            "raw": 6.755820291602005,
+            "slope": 6.025454323626122,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 47.52733394712995
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 20.027,
+          "heapMB": 26.427967071533203,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -88.95251457595175,
+            "z": 43.36973064908647,
+            "longitude": 121.15609711086765,
+            "latitude": 27.825108635222918,
+            "y": 6.177449165301121,
+            "raw": 6.027225421127808,
+            "slope": 2.074417841806276,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 62.892845681228295
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 25.032,
+          "heapMB": 17.88568115234375,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -86.93788027600762,
+            "z": 59.24722641124881,
+            "longitude": 121.15611755988388,
+            "latitude": 27.82496535804557,
+            "y": 5.6298491130139805,
+            "raw": 5.240957956319313,
+            "slope": 4.774494834768662,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 78.89764568122928
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 30.037,
+          "heapMB": 18.39000701904297,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 83
+          },
+          "player": {
+            "x": -84.92074857875069,
+            "z": 75.1444043634998,
+            "longitude": 121.1561380342493,
+            "latitude": 27.82482190325781,
+            "y": 5.044459507997826,
+            "raw": 4.710882350711382,
+            "slope": 7.44802398784238,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 94.92228568122995
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 35.042,
+          "heapMB": 17.44426727294922,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 83
+          },
+          "player": {
+            "x": -82.90462389653955,
+            "z": 91.03364594878005,
+            "longitude": 121.15615849839327,
+            "latitude": 27.82467852008715,
+            "y": 4.404795706948894,
+            "raw": 4.234842514310134,
+            "slope": 9.9669590884325,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 110.9389256812295
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 40.049,
+          "heapMB": 24.587566375732422,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 65
+          },
+          "player": {
+            "x": -78.73072543762221,
+            "z": 103.20386498796736,
+            "longitude": 121.15620086445314,
+            "latitude": 27.824568697061043,
+            "y": 3.7915540183798413,
+            "raw": 3.7782947552538335,
+            "slope": 8.709223674330875,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 126.30192825789618
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 45.052,
+          "heapMB": 16.575515747070312,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 83
+          },
+          "player": {
+            "x": -63.00097396137438,
+            "z": 100.2755688117763,
+            "longitude": 121.15636052516346,
+            "latitude": 27.82459512175779,
+            "y": 1.3743546901113606,
+            "raw": 1.3420076432131893,
+            "slope": 8.705213379777476,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 142.30192825789675
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 0
+          }
+        },
+        {
+          "seconds": 50.058,
+          "heapMB": 27.005699157714844,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -72.76567129138272,
+            "z": 102.24030155409268,
+            "longitude": 121.1562614111683,
+            "latitude": 27.824577392175883,
+            "y": 2.870602525506288,
+            "raw": 2.8173905001605366,
+            "slope": 9.159772732989001,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 157.67551600609602
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 55.106,
+          "heapMB": 27.981300354003906,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 69
+          },
+          "player": {
+            "x": -81.94156531041992,
+            "z": 96.84185771051571,
+            "longitude": 121.15616827366647,
+            "latitude": 27.824626107276018,
+            "y": 4.3211192572483945,
+            "raw": 4.204795367284158,
+            "slope": 11.471757900693355,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 173.187950475606
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 60.11,
+          "heapMB": 38.53998565673828,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 82
+          },
+          "player": {
+            "x": -84.00976684351684,
+            "z": 80.97641405075983,
+            "longitude": 121.1561472809301,
+            "latitude": 27.824769275696212,
+            "y": 4.691305056812061,
+            "raw": 4.44530220803381,
+            "slope": 7.870515414976547,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 189.1876304756067
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 65.116,
+          "heapMB": 41.10908889770508,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 72
+          },
+          "player": {
+            "x": -86.08148438954113,
+            "z": 65.08399859734672,
+            "longitude": 121.15612625250536,
+            "latitude": 27.824912687507588,
+            "y": 5.45687808901146,
+            "raw": 5.068004926994335,
+            "slope": 4.2087194217518284,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 205.2145104756072
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 70.12,
+          "heapMB": 33.70980453491211,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 66
+          },
+          "player": {
+            "x": -88.14972728749692,
+            "z": 49.21823762237095,
+            "longitude": 121.15610525934913,
+            "latitude": 27.825055858791206,
+            "y": 5.979731285523246,
+            "raw": 5.685107396931333,
+            "slope": 3.606148126094935,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 221.21451047560853
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 75.126,
+          "heapMB": 23.372196197509766,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 83
+          },
+          "player": {
+            "x": -90.38800719156025,
+            "z": 34.00905474020298,
+            "longitude": 121.15608254027694,
+            "latitude": 27.825193105169713,
+            "y": 6.511672444448985,
+            "raw": 6.50060166009891,
+            "slope": 6.292424475841304,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 236.594701820444
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 80.133,
+          "heapMB": 39.66629409790039,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 84
+          },
+          "player": {
+            "x": -93.61637608271303,
+            "z": 18.31069441700257,
+            "longitude": 121.15604977156657,
+            "latitude": 27.825334765844023,
+            "y": 6.630944221973501,
+            "raw": 6.638293041972422,
+            "slope": 5.927191861981173,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 252.6215818204453
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 85.14,
+          "heapMB": 35.25182342529297,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -96.84435821934723,
+            "z": 2.61421473755953,
+            "longitude": 121.15601700678184,
+            "latitude": 27.825476409547566,
+            "y": 6.0988751579260505,
+            "raw": 6.108836943461641,
+            "slope": 6.785948200940786,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 268.64654182044734
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 90.146,
+          "heapMB": 17.254764556884766,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -98.70629160742347,
+            "z": -12.582940819834457,
+            "longitude": 121.1559981077161,
+            "latitude": 27.82561354739251,
+            "y": 5.947736983462239,
+            "raw": 5.942274312225308,
+            "slope": 6.219657425711082,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 283.9928518023498
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 1
+          }
+        },
+        {
+          "seconds": 95.152,
+          "heapMB": 28.26111602783203,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 66
+          },
+          "player": {
+            "x": -98.48125622530323,
+            "z": -8.761626384685094,
+            "longitude": 121.15600039187864,
+            "latitude": 27.825579064174615,
+            "y": 5.920286036107127,
+            "raw": 5.875280279593514,
+            "slope": 6.676426578160008,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 299.3649565060572
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 100.157,
+          "heapMB": 38.613548278808594,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 75
+          },
+          "player": {
+            "x": -96.04016521273266,
+            "z": 6.375225372165684,
+            "longitude": 121.1560251695317,
+            "latitude": 27.825442470506058,
+            "y": 6.194994702863431,
+            "raw": 6.221430148844692,
+            "slope": 6.5792733648151165,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 314.72926499206875
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 105.161,
+          "heapMB": 35.34173583984375,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 73
+          },
+          "player": {
+            "x": -92.82319241205862,
+            "z": 22.048158923422896,
+            "longitude": 121.15605782256905,
+            "latitude": 27.825301039280784,
+            "y": 6.732885344055713,
+            "raw": 6.780388280835891,
+            "slope": 5.284523996664258,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 330.72894499207194
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 110.167,
+          "heapMB": 39.710174560546875,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 80
+          },
+          "player": {
+            "x": -89.74831012548506,
+            "z": 37.09768203653493,
+            "longitude": 121.15608903335396,
+            "latitude": 27.825165233658517,
+            "y": 6.369077000248305,
+            "raw": 6.3355283918993095,
+            "slope": 3.736162963316085,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 346.08990437711685
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 115.171,
+          "heapMB": 19.038219451904297,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 85
+          },
+          "player": {
+            "x": -87.73368530685016,
+            "z": 52.97517900174124,
+            "longitude": 121.15610948227396,
+            "latitude": 27.825021956470316,
+            "y": 5.861157731571837,
+            "raw": 5.463121649202243,
+            "slope": 2.8553579623481027,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 362.0947043771174
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 120.177,
+          "heapMB": 19.41387939453125,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 77
+          },
+          "player": {
+            "x": -85.71636170059465,
+            "z": 68.87394543204186,
+            "longitude": 121.1561299585873,
+            "latitude": 27.82487848734826,
+            "y": 5.267437970893294,
+            "raw": 4.946467246170068,
+            "slope": 6.584249005662906,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 378.1209443771199
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 125.183,
+          "heapMB": 28.364700317382812,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -83.69895753351462,
+            "z": 84.77334677174902,
+            "longitude": 121.15615043571836,
+            "latitude": 27.824735012496838,
+            "y": 4.635096809777129,
+            "raw": 4.281896000143463,
+            "slope": 9.812392472443221,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 394.1478243771224
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 130.19,
+          "heapMB": 27.24864959716797,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 77
+          },
+          "player": {
+            "x": -81.68163392726015,
+            "z": 100.67211320204969,
+            "longitude": 121.15617091203168,
+            "latitude": 27.824591543374787,
+            "y": 4.326284396891428,
+            "raw": 4.223491349291744,
+            "slope": 11.66234579961377,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 410.1740643771236
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 135.196,
+          "heapMB": 18.112892150878906,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -69.18820751410188,
+            "z": 101.4255190025049,
+            "longitude": 121.1562977232746,
+            "latitude": 27.824584744704637,
+            "y": 2.2716952020450405,
+            "raw": 2.264948542645251,
+            "slope": 8.77979830621586,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 425.5235539969823
+          },
+          "playback": {
+            "active": true,
+            "index": 4,
+            "direction": 1,
+            "laps": 2
+          }
+        },
+        {
+          "seconds": 140.201,
+          "heapMB": 18.624584197998047,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 64
+          },
+          "player": {
+            "x": -66.59226599615086,
+            "z": 101.01802027077514,
+            "longitude": 121.15632407269706,
+            "latitude": 27.82458842193869,
+            "y": 1.8934740371567342,
+            "raw": 1.8695812803161411,
+            "slope": 8.591722387774713,
+            "road": "非道路",
+            "blocked": "",
+            "distance": 440.897334186308
+          },
+          "playback": {
+            "active": true,
+            "index": 3,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 145.204,
+          "heapMB": 25.56916046142578,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 72
+          },
+          "player": {
+            "x": -81.112108893143,
+            "z": 103.22809862547243,
+            "longitude": 121.15617669284595,
+            "latitude": 27.82456847837875,
+            "y": 4.246903290901173,
+            "raw": 4.167660264035561,
+            "slope": 13.211842811001626,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 456.26638889455484
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 150.209,
+          "heapMB": 40.46268081665039,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 61
+          },
+          "player": {
+            "x": -83.17793700419921,
+            "z": 87.37525388549065,
+            "longitude": 121.15615572420037,
+            "latitude": 27.824711533107358,
+            "y": 4.4765642190567245,
+            "raw": 4.197813608424324,
+            "slope": 9.812392472443191,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 472.2532688945602
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 155.216,
+          "heapMB": 37.17954635620117,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 84
+          },
+          "player": {
+            "x": -85.25058794274148,
+            "z": 71.47005182486409,
+            "longitude": 121.15613468630148,
+            "latitude": 27.824855060303996,
+            "y": 5.142932303867203,
+            "raw": 4.845259661934727,
+            "slope": 6.042454473801465,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 488.2929488945656
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 160.22,
+          "heapMB": 19.7183837890625,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -87.31790467070523,
+            "z": 55.60578366946906,
+            "longitude": 121.1561137025461,
+            "latitude": 27.824998218116537,
+            "y": 5.78624622011106,
+            "raw": 5.330915409999983,
+            "slope": 2.8553579623481027,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 504.29134889457174
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 165.225,
+          "heapMB": 39.55229568481445,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 62
+          },
+          "player": {
+            "x": -89.38906699234232,
+            "z": 39.71200502425613,
+            "longitude": 121.15609267975702,
+            "latitude": 27.82514164222924,
+            "y": 6.291094051117343,
+            "raw": 6.208629771408777,
+            "slope": 3.270433999276115,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 520.3195088945791
+          },
+          "playback": {
+            "active": true,
+            "index": 2,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 170.229,
+          "heapMB": 19.197509765625,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 67
+          },
+          "player": {
+            "x": -92.31431025565678,
+            "z": 24.641341630430187,
+            "longitude": 121.15606298784371,
+            "latitude": 27.82527763861961,
+            "y": 6.729818039180142,
+            "raw": 6.885351672158062,
+            "slope": 6.025454323626142,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 535.6767466853644
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 175.233,
+          "heapMB": 20.273921966552734,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 68
+          },
+          "player": {
+            "x": -95.54006046837031,
+            "z": 8.95616403504483,
+            "longitude": 121.15603024571354,
+            "latitude": 27.825419180334105,
+            "y": 6.301043741581578,
+            "raw": 6.308005681564465,
+            "slope": 6.498071027939637,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 551.6901866853739
+          },
+          "playback": {
+            "active": true,
+            "index": 1,
+            "direction": -1,
+            "laps": 3
+          }
+        },
+        {
+          "seconds": 180.236,
+          "heapMB": 36.348575592041016,
+          "stats": {
+            "fps": 120,
+            "calls": 12,
+            "triangles": 357459,
+            "geometries": 14,
+            "textures": 0,
+            "heapMB": 86
+          },
+          "player": {
+            "x": -98.28845861390116,
+            "z": -6.130488072297513,
+            "longitude": 121.15600234882014,
+            "latitude": 27.82555532100527,
+            "y": 5.965563738009028,
+            "raw": 5.825755597438522,
+            "slope": 6.676426578160014,
+            "road": "residential (way/1546274171)",
+            "blocked": "",
+            "distance": 567.0452206326489
+          },
+          "playback": {
+            "active": true,
+            "index": 0,
+            "direction": -1,
+            "laps": 3
+          }
+        }
+      ],
+      "errors": [],
+      "external": [],
+      "arrivalCaptured": true
+    }
+  ],
+  "payloads": [
+    {
+      "path": "public/data/dongao/world.json",
+      "bytes": 2122743,
+      "gzipBytes": 258103
+    },
+    {
+      "path": "public/data/dongao/dem/terrain.f32",
+      "bytes": 2231712,
+      "gzipBytes": 411117
+    },
+    {
+      "path": "public/data/dongao/reference/sentinel-20250320.png",
+      "bytes": 127928,
+      "gzipBytes": 127986
+    }
+  ]
+}

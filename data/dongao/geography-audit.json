@@ -1,0 +1,864 @@
+{
+  "buildingCount": 2789,
+  "buildingOutsideLand": [],
+  "duplicateCandidates": [],
+  "controls": [
+    {
+      "id": "ref-1",
+      "name": "半屏大桥北桥头",
+      "reference": [
+        121.15133027343751,
+        27.821800390625
+      ],
+      "adopted": [
+        121.15133653080599,
+        27.821619497086427
+      ],
+      "distanceMeters": 20.06,
+      "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+      "pixel": [
+        56.5,
+        180.5
+      ],
+      "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+      "uncertaintyMeters": 20,
+      "amapRaw": null,
+      "amapWgs84": null
+    },
+    {
+      "id": "ref-2",
+      "name": "半屏大桥南桥头",
+      "reference": [
+        121.1514888671875,
+        27.819404453125
+      ],
+      "adopted": [
+        121.15149110595799,
+        27.81938586489997
+      ],
+      "distanceMeters": 2.07,
+      "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+      "pixel": [
+        58.5,
+        214.5
+      ],
+      "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+      "uncertaintyMeters": 20,
+      "amapRaw": null,
+      "amapWgs84": null
+    },
+    {
+      "id": "ref-3",
+      "name": "东岙沙滩西侧岸线",
+      "reference": [
+        121.1562466796875,
+        27.824619140625
+      ],
+      "adopted": [
+        121.1562539,
+        27.8242952
+      ],
+      "distanceMeters": 35.91,
+      "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+      "pixel": [
+        118.5,
+        140.5
+      ],
+      "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+      "uncertaintyMeters": 20,
+      "amapRaw": null,
+      "amapWgs84": null
+    },
+    {
+      "id": "ref-4",
+      "name": "东岙沙滩东侧岸线",
+      "reference": [
+        121.15791191406251,
+        27.823703046875
+      ],
+      "adopted": [
+        121.1575522,
+        27.8235399
+      ],
+      "distanceMeters": 39.78,
+      "referenceSource": "Sentinel-2 S2B_51RUL_20250320_0_L2A",
+      "pixel": [
+        139.5,
+        153.5
+      ],
+      "method": "Manual coarse pixel pick; compare nearest OSM coastline point; correspondence uncertain, not surveyed control",
+      "uncertaintyMeters": 20,
+      "amapRaw": null,
+      "amapWgs84": null
+    },
+    {
+      "id": "node/13607433057",
+      "name": "东岙村",
+      "osm": [
+        121.1567624,
+        27.8257104
+      ],
+      "adopted": [
+        121.15599415965787,
+        27.825667736962423
+      ],
+      "role": "road-spawn",
+      "distanceMeters": 75.82,
+      "referenceSource": "OSM original vs gameplay access point (not independent)",
+      "amapRaw": null,
+      "amapWgs84": null,
+      "entrance": null
+    },
+    {
+      "id": "way/836480414",
+      "name": "东岙沙滩",
+      "osm": [
+        121.15720669701527,
+        27.8242077
+      ],
+      "adopted": [
+        121.15639,
+        27.8246
+      ],
+      "role": "player-arrival-unverified-entrance",
+      "distanceMeters": 91.44,
+      "referenceSource": "OSM original vs gameplay access point (not independent)",
+      "amapRaw": null,
+      "amapWgs84": null,
+      "entrance": null
+    }
+  ],
+  "roadIntersections": [
+    {
+      "coordinate": [
+        121.1537168,
+        27.8239096
+      ],
+      "roads": [
+        "way/408912047",
+        "way/702532881",
+        "way/704062684"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1534623,
+        27.8236523
+      ],
+      "roads": [
+        "way/408912047",
+        "way/704062685"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1488738,
+        27.8222549
+      ],
+      "roads": [
+        "way/408912047",
+        "way/702532878"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1476513,
+        27.822028
+      ],
+      "roads": [
+        "way/408912047",
+        "way/967108290"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1536244,
+        27.8331415
+      ],
+      "roads": [
+        "way/702532878",
+        "way/702532885"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1521235,
+        27.8303723
+      ],
+      "roads": [
+        "way/702532878",
+        "way/703469423"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1526185,
+        27.8271676
+      ],
+      "roads": [
+        "way/702532878",
+        "way/978147410"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1635176,
+        27.8307027
+      ],
+      "roads": [
+        "way/702532881",
+        "way/967108304"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1624507,
+        27.8300213
+      ],
+      "roads": [
+        "way/702532881",
+        "way/702532886"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1621695,
+        27.8297407
+      ],
+      "roads": [
+        "way/702532881",
+        "way/702532885"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1613757,
+        27.8288859
+      ],
+      "roads": [
+        "way/702532881",
+        "way/703442757"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1603832,
+        27.828157
+      ],
+      "roads": [
+        "way/702532881",
+        "way/703987808"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1542583,
+        27.8261302
+      ],
+      "roads": [
+        "way/1546274171",
+        "way/702532881"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1539955,
+        27.8241892
+      ],
+      "roads": [
+        "way/702532881",
+        "way/704062685"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1620668,
+        27.8300422
+      ],
+      "roads": [
+        "way/702532885",
+        "way/702532886"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1613201,
+        27.8305743
+      ],
+      "roads": [
+        "way/1484029124",
+        "way/702532885"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.160498,
+        27.8308236
+      ],
+      "roads": [
+        "way/1484029117",
+        "way/702532885",
+        "way/967108304"
+      ],
+      "degree": 4
+    },
+    {
+      "coordinate": [
+        121.1574579,
+        27.8315529
+      ],
+      "roads": [
+        "way/702532885",
+        "way/702532887"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1570769,
+        27.8318637
+      ],
+      "roads": [
+        "way/702532885",
+        "way/967108301"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1570113,
+        27.8320004
+      ],
+      "roads": [
+        "way/702532885",
+        "way/967108300"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.155946,
+        27.8329463
+      ],
+      "roads": [
+        "way/702532885",
+        "way/978147404"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1551729,
+        27.8306776
+      ],
+      "roads": [
+        "way/702532887",
+        "way/978147406"
+      ],
+      "degree": 4
+    },
+    {
+      "coordinate": [
+        121.1534565,
+        27.8306525
+      ],
+      "roads": [
+        "way/702532887",
+        "way/978147408"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1662122,
+        27.8309503
+      ],
+      "roads": [
+        "way/703442756",
+        "way/704062702"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1617009,
+        27.8287102
+      ],
+      "roads": [
+        "way/703442756",
+        "way/703442757"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1627149,
+        27.8280757
+      ],
+      "roads": [
+        "way/1484029116",
+        "way/703442756"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1655471,
+        27.8269167
+      ],
+      "roads": [
+        "way/703442756",
+        "way/704062699"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1654954,
+        27.8260714
+      ],
+      "roads": [
+        "way/703442756",
+        "way/967108291"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1654547,
+        27.8255197
+      ],
+      "roads": [
+        "way/703442756",
+        "way/703987809"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1670666,
+        27.8200714
+      ],
+      "roads": [
+        "way/1546274172",
+        "way/703442756"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1617743,
+        27.8256398
+      ],
+      "roads": [
+        "way/703987808",
+        "way/967108291"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1608282,
+        27.8238099
+      ],
+      "roads": [
+        "way/703987808",
+        "way/703987810"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1618815,
+        27.8225932
+      ],
+      "roads": [
+        "way/703987809",
+        "way/703987810"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1533658,
+        27.8239857
+      ],
+      "roads": [
+        "way/704062684",
+        "way/704062685"
+      ],
+      "degree": 4
+    },
+    {
+      "coordinate": [
+        121.1656843,
+        27.8288941
+      ],
+      "roads": [
+        "way/1484029116",
+        "way/704062699"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1671261,
+        27.8299485
+      ],
+      "roads": [
+        "way/704062700",
+        "way/704062701",
+        "way/704062702"
+      ],
+      "degree": 4
+    },
+    {
+      "coordinate": [
+        121.1571323,
+        27.8321291
+      ],
+      "roads": [
+        "way/967108300",
+        "way/978147403"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1588951,
+        27.8341541
+      ],
+      "roads": [
+        "way/967108300",
+        "way/978147400"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1615162,
+        27.8310265
+      ],
+      "roads": [
+        "way/967108301",
+        "way/967108304"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1598981,
+        27.8317242
+      ],
+      "roads": [
+        "way/1484029118",
+        "way/967108301"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1646718,
+        27.8325149
+      ],
+      "roads": [
+        "way/967108302",
+        "way/967108303"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1625711,
+        27.8312331
+      ],
+      "roads": [
+        "way/967108303",
+        "way/967108304"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1571354,
+        27.8338809
+      ],
+      "roads": [
+        "way/978147401",
+        "way/978147402"
+      ],
+      "degree": 3
+    },
+    {
+      "coordinate": [
+        121.1542815,
+        27.8289325
+      ],
+      "roads": [
+        "way/978147409",
+        "way/978147410"
+      ],
+      "degree": 4
+    },
+    {
+      "coordinate": [
+        121.155982,
+        27.8258408
+      ],
+      "roads": [
+        "way/1546274170",
+        "way/1546274171"
+      ],
+      "degree": 3
+    }
+  ],
+  "poiSeparationMeters": 172.18,
+  "satelliteRegistration": "Coarse visual check only. No global or per-layer offset applied. Individual building registration NOT established.",
+  "amap": "Not supplied; reverse transformation authority/contract not available; no GCJ-02 coordinates admitted to runtime",
+  "readyForGameplay": false,
+  "terrain": {
+    "rawDem": "Copernicus GLO-30; bilinear native-cell interpolation",
+    "rendered": "Regular 10m-cell DEM surface clipped to coast; shared spatial triangle index and barycentric interpolation for roads/buildings/player; no synthetic detail",
+    "verticalScale": 1
+  },
+  "roads": {
+    "segments": 6829,
+    "centerlineSampleSpacingMeters": 3,
+    "byIssue": {
+      "bridge-profile-unverified": {
+        "samples": 129,
+        "ways": [
+          "way/506084787"
+        ]
+      },
+      "tunnel-profile-unavailable": {
+        "samples": 10,
+        "ways": [
+          "way/702532882"
+        ]
+      },
+      "non-bridge-inland-water": {
+        "samples": 4,
+        "ways": [
+          "way/1484029116"
+        ]
+      }
+    },
+    "issues": [
+      {
+        "a": {
+          "x": 676.8060341864715,
+          "z": -318.72283849088643,
+          "y": 40.112747749988706
+        },
+        "b": {
+          "x": 679.5279318259436,
+          "z": -319.855229950927,
+          "y": 40.14038788029866
+        },
+        "id": "way/1484029116",
+        "name": "residential",
+        "kind": "residential",
+        "width": 4.5,
+        "bridge": false,
+        "tunnel": false,
+        "issues": [
+          "non-bridge-inland-water"
+        ],
+        "geo": {
+          "longitude": 121.16386974186047,
+          "latitude": 27.828376127906978
+        }
+      },
+      {
+        "a": {
+          "x": 679.5279318259436,
+          "z": -319.855229950927,
+          "y": 40.14038788029866
+        },
+        "b": {
+          "x": 682.2498294654157,
+          "z": -320.9876214109677,
+          "y": 40.11611472320571
+        },
+        "id": "way/1484029116",
+        "name": "residential",
+        "kind": "residential",
+        "width": 4.5,
+        "bridge": false,
+        "tunnel": false,
+        "issues": [
+          "non-bridge-inland-water"
+        ],
+        "geo": {
+          "longitude": 121.16389736976744,
+          "latitude": 27.82838634651163
+        }
+      },
+      {
+        "a": {
+          "x": 682.2498294654157,
+          "z": -320.9876214109677,
+          "y": 40.11611472320571
+        },
+        "b": {
+          "x": 684.9717271048877,
+          "z": -322.1200128710083,
+          "y": 40.08040771359234
+        },
+        "id": "way/1484029116",
+        "name": "residential",
+        "kind": "residential",
+        "width": 4.5,
+        "bridge": false,
+        "tunnel": false,
+        "issues": [
+          "non-bridge-inland-water"
+        ],
+        "geo": {
+          "longitude": 121.16392499767441,
+          "latitude": 27.82839656511628
+        }
+      },
+      {
+        "a": {
+          "x": 684.9717271048877,
+          "z": -322.1200128710083,
+          "y": 40.08040771359234
+        },
+        "b": {
+          "x": 687.6936247443598,
+          "z": -323.252404331049,
+          "y": 40.04470070397897
+        },
+        "id": "way/1484029116",
+        "name": "residential",
+        "kind": "residential",
+        "width": 4.5,
+        "bridge": false,
+        "tunnel": false,
+        "issues": [
+          "non-bridge-inland-water"
+        ],
+        "geo": {
+          "longitude": 121.16395262558139,
+          "latitude": 27.82840678372093
+        }
+      }
+    ],
+    "bridge": {
+      "minimumDeckMeters": 22.261491431216353,
+      "profile": "DSM abutment interpolation; unverified clearance; never sampled from sea"
+    },
+    "tunnel": "No surface road or traversal until longitudinal profile exists",
+    "steps": "No mapped steps in this snapshot; generalized DEM-following width/type supported, exact risers unavailable"
+  },
+  "buildings": {
+    "count": 2789,
+    "footCount": 292884,
+    "maxBaseErrorMeters": 0.05000381057192271,
+    "minRoofClearanceMeters": 5.999996217628279,
+    "height": "Uniform provisional 6m above highest footprint terrain, bottom follows terrain every <=2m"
+  },
+  "roadRender": {
+    "checked": 39482,
+    "worstRoadPoint": null,
+    "maxRoadMeshGapMeters": 0.16679176636723048,
+    "maxBurialMeters": 0,
+    "note": "Non-bridge triangles only; bridges use explicitly unverified deck profile"
+  },
+  "route": {
+    "source": "OSM way/1546274171; last 21m unmapped link to beach interior, not verified entrance",
+    "points": [
+      {
+        "longitude": 121.15599415965787,
+        "latitude": 27.825667736962423
+      },
+      {
+        "longitude": 121.1560035,
+        "latitude": 27.8255348
+      },
+      {
+        "longitude": 121.1560893,
+        "latitude": 27.8251647
+      },
+      {
+        "longitude": 121.1561751,
+        "latitude": 27.8245622
+      },
+      {
+        "longitude": 121.15639,
+        "latitude": 27.8246
+      }
+    ],
+    "trace": [
+      {
+        "x": -98.1883810693868,
+        "z": -4.069923784181775,
+        "longitude": 121.15600336463096,
+        "latitude": 27.825536726647613,
+        "y": 6.006838190510982,
+        "raw": 5.917069785501051,
+        "slope": 6.676426578159983,
+        "road": "residential (way/1546274171)",
+        "blocked": "",
+        "distance": 14.546419508105421
+      },
+      {
+        "x": -89.75675428383579,
+        "z": 36.98778044341483,
+        "longitude": 121.15608894764375,
+        "latitude": 27.825166225401187,
+        "y": 6.372036776518805,
+        "raw": 6.339749115615994,
+        "slope": 3.768770626827573,
+        "road": "residential (way/1546274171)",
+        "blocked": "",
+        "distance": 56.46094451664622
+      },
+      {
+        "x": -81.29356738117355,
+        "z": 103.73038634657836,
+        "longitude": 121.15617485099922,
+        "latitude": 27.824563945776887,
+        "y": 4.2940688298235745,
+        "raw": 4.2040140420707495,
+        "slope": 13.211842811001622,
+        "road": "residential (way/1546274171)",
+        "blocked": "",
+        "distance": 123.73799093884212
+      },
+      {
+        "x": -60.33495316223526,
+        "z": 99.77980911116151,
+        "longitude": 121.15638758590725,
+        "latitude": 27.824599595451346,
+        "y": 0.9933255596866973,
+        "raw": 0.9584680310416939,
+        "slope": 5.970319131731304,
+        "road": "非道路",
+        "blocked": "",
+        "distance": 145.06568585580993
+      }
+    ],
+    "passed": true,
+    "maxSlope": 13.211842811001626,
+    "maxPlayerGroundError": 0
+  }
+}

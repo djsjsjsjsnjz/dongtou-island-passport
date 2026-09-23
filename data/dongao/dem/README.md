@@ -1,9 +1,11 @@
-# DEM 接入待地图确认
+# Real cached terrain
 
-本阶段按用户 STEP 4 只审阅 OSM，未导入 DEM，没有随机山体或伪高程。
+Implemented: Copernicus GLO-30 Public, N27 E121, 2021 release. Source acquisition and SHA-256: `manifest.json`. Licence copy: `../sources/License-COPDEM-30.pdf`. Full processing and limitations: `../../../docs/data-sources.md`.
 
-确认后可将合法获取的 GeoTIFF 放在此目录（已 gitignore）。优先 Copernicus GLO-30：https://registry.opendata.aws/copernicus-dem/ ，公开 AWS 数据无需 OpenTopography key。
+- `source.tif`: full source tile, locally cached and gitignored.
+- `clipped.tif`: native-cell crop with interpolation halo, locally cached.
+- `heightfield.json`: 77×69 native samples and pixel-center georeferencing; bilinear raw-height queries.
+- `terrain.f32`: real DEM triangulation clipped to OSM coast; little-endian Float32 XYZ triangles in metre world coordinates.
+- `mesh-manifest.json`: bbox, origin, encoding, checksum and grid spacing.
 
-也可在 https://portal.opentopography.org/ 注册，查看账户 API key 与所选数据权限；将 key 保存为根目录 `.env.local` 中的 `OPENTOPOGRAPHY_API_KEY`。本轮未实现 DEM 下载/处理命令，不能声称放入文件即可运行地形。
-
-后续处理必须验证 EPSG、像元顺序、NoData、DSM/DTM 属性和垂直基准。GLO-30 是 DSM，不能把 30m 像元解释为巷道级实测地面。地图确认后再实现裁剪、采样、height field 和统一贴地查询。
+No external runtime dependency; browser verifies the local mesh SHA-256. Missing/corrupt DEM disables exploration with an explicit recoverable error. Reprocess with the scripts documented in the root README. 10m render cells do not turn 30m DSM into 10m measurements. Vertical scale is fixed at 1:1.

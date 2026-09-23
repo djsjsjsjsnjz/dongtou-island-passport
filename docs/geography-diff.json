@@ -1,0 +1,46 @@
+{
+  "roads": {
+    "featuresBefore": 49,
+    "featuresAfter": 49,
+    "semanticallyUnchanged": true
+  },
+  "coastline": {
+    "featuresBefore": 6,
+    "featuresAfter": 6,
+    "semanticallyUnchanged": true
+  },
+  "land": {
+    "featuresBefore": 1,
+    "featuresAfter": 1,
+    "semanticallyUnchanged": true
+  },
+  "sea": {
+    "featuresBefore": 1,
+    "featuresAfter": 1,
+    "semanticallyUnchanged": true
+  },
+  "landuse": {
+    "featuresBefore": 14,
+    "featuresAfter": 14,
+    "semanticallyUnchanged": true
+  },
+  "water": {
+    "featuresBefore": 4,
+    "featuresAfter": 4,
+    "semanticallyUnchanged": true
+  },
+  "pois": {
+    "featuresBefore": 13,
+    "featuresAfter": 13,
+    "semanticallyUnchanged": true
+  },
+  "buildings": {
+    "before": 1,
+    "after": 2789,
+    "sources": "1 OSM + 2788 EAB, one duplicate suppressed; not procedural"
+  },
+  "terrain": {
+    "before": "zero-height flat plane",
+    "after": "real Copernicus DSM, 61992 triangles, 1x vertical scale"
+  }
+}

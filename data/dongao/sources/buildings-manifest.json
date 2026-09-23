@@ -1,0 +1,17 @@
+{
+  "count": 2789,
+  "bbox": [
+    121.14685,
+    27.81648,
+    121.16715,
+    27.83452
+  ],
+  "source": "https://doi.org/10.5281/zenodo.8174931",
+  "license": "CC-BY-4.0",
+  "sourceCRS": "PROJCS[\"WGS_1984_UTM_Zone_49N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",500000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",111.0],PARAMETER[\"Scale_Factor\",0.9996],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]",
+  "targetCRS": "EPSG:4326",
+  "method": "Read source .prj; reproject individual geometries with GDAL/PROJ; intersect bbox; preserve source shapefile record index. No translation, rotation, scale fitting, procedural fill, or residential polygon conversion.",
+  "height": "Uniform provisional 6 metres, no real height claim",
+  "missing": "ML omissions / false positives and source age unknown locally; no independent satellite registration yet",
+  "sha256": "5a205f075850332b40419731eb75b9e846b9073843b4fe5ce98d71dd24b5a4b6"
+}

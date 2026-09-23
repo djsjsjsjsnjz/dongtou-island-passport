@@ -5,6 +5,13 @@ export async function readJson<T = any>(path: string): Promise<T> {
 }
 export async function writeJson(path: string, value: unknown) {
   await mkdir(dirname(path), { recursive: true });
-  await writeFile(`${path}.tmp`, JSON.stringify(value, null, 2) + "\n");
+  await writeFile(
+    `${path}.tmp`,
+    JSON.stringify(
+      value,
+      null,
+      path.endsWith(".geojson") || path.endsWith("world.json") ? undefined : 2,
+    ) + "\n",
+  );
   await rename(`${path}.tmp`, path);
 }

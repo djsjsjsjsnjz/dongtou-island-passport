@@ -1,0 +1,14 @@
+{
+  "url": "https://zenodo.org/api/records/8174931/files/East_Asian_buildings.zip/content",
+  "doi": "10.5281/zenodo.8174931",
+  "license": "CC-BY-4.0",
+  "authors": "Qian Shi, Jiajun Zhu, Zhengyu Liu, Haonan Guo, Mengxi Liu, Zihong Liu, Xiaoping Liu",
+  "retrievedAt": "2026-09-23T01:44:39.621332+00:00",
+  "files": {
+    "Wenzhou.prj": "f091cc5695962ce8d7807e3c43aa152ee62e419212c0fab878c56782910f2080",
+    "Wenzhou.dbf": "41db5a0ca6f839528355230ef5b4401dc2f155602177f852bcbb3657d073a5f4",
+    "Wenzhou.shx": "31733ea4aa18473afb58c78b78f57d4a6f1412a7b13bfd233ee8d1f00d19b069",
+    "Wenzhou.shp": "ee2c53ecdb3918fe32a5a24e7475a213faf9c4dc19774c60c29d5d1076a1900b",
+    "Wenzhou.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  }
+}

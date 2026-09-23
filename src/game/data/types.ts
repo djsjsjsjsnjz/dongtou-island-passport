@@ -12,6 +12,14 @@ export type WorldData = Record<
   "roads" | "buildings" | "coastline" | "water" | "landuse" | "land" | "sea",
   FeatureCollection
 > & {
+  terrainPositions?: Float32Array;
+  terrainMesh: {
+    bytes: number;
+    sha256: string;
+    bbox: number[];
+    center: { longitude: number; latitude: number };
+  };
+  dem: import("../world/terrain").HeightField;
   pois: Poi[];
   report: {
     schemaVersion: number;
@@ -21,6 +29,6 @@ export type WorldData = Record<
     dimensions: { width: number; depth: number };
     warnings: string[];
     source: { retrievedAt: string; osmTimestamp: string };
-    dem: null;
+    dem: Record<string, unknown>;
   };
 };

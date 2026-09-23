@@ -9,3 +9,6 @@ playwright-report/
 !.env.example
 data/dongao/dem/*.tif
 data/dongao/dem/*.tiff
+data/dongao/sources/eab/
+
+.venv-geo/

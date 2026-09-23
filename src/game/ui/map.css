@@ -438,3 +438,72 @@
     max-height: calc(100dvh - 107px);
   }
 }
+.geo-walk-controls {
+  position: absolute;
+  left: 18px;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  background: #fffdf1d9;
+  padding: 5px;
+}
+.geo-walk-controls button,
+.geo-dpad button {
+  border: 1px solid #aabdaf;
+  background: #fffdf1e8;
+  border-radius: 5px;
+  padding: 9px;
+}
+.geo-dpad {
+  position: absolute;
+  left: 20px;
+  bottom: 78px;
+  display: grid;
+  grid-template-columns: repeat(3, 42px);
+  gap: 4px;
+  touch-action: none;
+}
+.geo-dpad button {
+  height: 42px;
+  touch-action: none;
+  user-select: none;
+}
+.geo-dpad button:first-child {
+  grid-column: 2;
+}
+.geo-dpad button:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.geo-dpad button:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.geo-dpad button:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+.geo-scale {
+  position: absolute;
+  right: 22px;
+  bottom: 66px;
+  border-bottom: 3px solid #234844;
+  border-left: 2px solid #234844;
+  border-right: 2px solid #234844;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 10px;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .geo-walk-controls {
+    top: 96px;
+    left: 12px;
+  }
+  .geo-dpad {
+    bottom: 78px;
+    left: 12px;
+  }
+}
