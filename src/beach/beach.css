@@ -1,0 +1,145 @@
+.beach-app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  color: #243d3d;
+  background: #eef1eb;
+  font-family: system-ui, -apple-system, "PingFang SC", sans-serif;
+}
+.beach-app * { box-sizing: border-box; }
+.beach-app h1, .beach-app h2, .beach-app h3, .beach-app p { margin: 0; }
+.beach-header {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 26px;
+  border-bottom: 1px solid #cfd8cf;
+}
+.beach-header span, .beach-status {
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: #5f7975;
+}
+.beach-header h1 { margin: 5px 0; font-size: 24px; }
+.beach-header p, .beach-header a { font-size: 12px; color: #64776f; }
+.beach-workspace { flex: 1; min-height: 0; }
+.beach-workspace.is-dev { display: grid; grid-template-columns: minmax(0, 1fr) 310px; }
+.beach-stage {
+  position: relative;
+  min-height: 620px;
+  height: calc(100dvh - 104px);
+  overflow: hidden;
+  background: #e7ede7;
+}
+.beach-canvas { position: absolute; inset: 0; }
+.beach-canvas canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.beach-toolbar {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: calc(100% - 32px);
+}
+.beach-toolbar button, .beach-walk button {
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid #bfcbbf;
+  border-radius: 3px;
+  background: #fffef7;
+  color: #304e4a;
+  font: 11px inherit;
+  cursor: pointer;
+}
+.beach-walk {
+  position: absolute;
+  left: 16px;
+  top: 62px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  color: #587068;
+}
+.beach-boundary-key {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 14px;
+  padding: 8px 10px;
+  background: #f8faf2df;
+  font-size: 10px;
+}
+.beach-boundary-key span { display: flex; align-items: center; gap: 6px; }
+.beach-boundary-key i { width: 20px; height: 3px; display: inline-block; }
+.beach-boundary-key .core { background: #d63b68; }
+.beach-boundary-key .buffer { background: #1686a0; }
+.beach-labels { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.beach-poi-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3px 6px;
+  border: 1px solid #c4cdbc;
+  background: #fffef4eb;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.beach-scale {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+  min-width: 35px;
+  max-width: 260px;
+  padding-top: 5px;
+  border-top: 2px solid #284d50;
+  color: #284d50;
+  font-size: 9px;
+  text-align: center;
+}
+.beach-debug {
+  max-height: calc(100dvh - 104px);
+  overflow: auto;
+  padding: 22px 20px;
+  border-left: 1px solid #cfd8cf;
+  background: #f5f6f0;
+  font-size: 11px;
+}
+.beach-debug h2 { margin: 9px 0 7px; font-size: 16px; }
+.beach-debug h3 { margin: 18px 0 9px; font-size: 11px; }
+.beach-debug p { color: #617169; font-size: 11px; line-height: 1.65; }
+.beach-debug dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 12px;
+  margin: 16px 0 0;
+  font: 10px/1.4 ui-monospace, monospace;
+}
+.beach-debug dd { margin: 0; text-align: right; }
+.beach-debug dt { color: #6b7e72; }
+.beach-layer-list { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 5px; }
+.beach-layer-list label { display: flex; gap: 5px; align-items: flex-start; font-size: 9px; }
+.beach-layer-list input { margin: 0; accent-color: #26717c; }
+.beach-debug > a { display: inline-block; margin-top: 16px; color: #32717a; font-size: 10px; }
+.beach-stats { margin-top: 16px !important; padding-top: 12px; border-top: 1px solid #d7ddd4; }
+.beach-dpad { bottom: 46px; }
+@media (max-width: 760px) {
+  .beach-header { min-height: 92px; padding: 13px 15px; align-items: flex-start; }
+  .beach-header h1 { font-size: 18px; }
+  .beach-header p { font-size: 9px; }
+  .beach-header a { font-size: 9px; margin-top: 5px; }
+  .beach-workspace.is-dev { display: flex; flex-direction: column; }
+  .beach-stage { height: 62dvh; min-height: 420px; }
+  .beach-debug { max-height: none; border-left: 0; border-top: 1px solid #cfd8cf; }
+  .beach-toolbar { left: 10px; top: 10px; }
+  .beach-toolbar button { min-height: 34px; padding: 6px 8px; }
+  .beach-walk { left: 10px; top: 52px; }
+  .beach-boundary-key { left: 10px; bottom: 10px; }
+  .beach-dpad { bottom: 52px; }
+}

@@ -1,0 +1,19 @@
+{
+  "format": "float32-little-endian xyz triangles",
+  "crs": "EPSG:4326",
+  "projectionOrigin": {
+    "longitude": 121.157,
+    "latitude": 27.8255
+  },
+  "bbox": [
+    121.1541649762689,
+    27.821497608467407,
+    121.1602550237311,
+    27.82691239153259
+  ],
+  "bytes": 219060,
+  "sha256": "fe479d48e02a686cc0c62e5d8bff702d0c880957966fc1b38b04cf689d68ccb2",
+  "triangles": 6085,
+  "source": "public/data/dongao/dem/terrain.f32 @ a7168d8",
+  "method": "Sutherland-Hodgman clipping in the existing world X/Z plane; Y is linearly interpolated on original terrain faces"
+}

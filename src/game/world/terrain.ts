@@ -173,9 +173,23 @@ export function configureTerrain(
   landData: FeatureCollection,
   waterData?: FeatureCollection,
 ) {
+  const sampleBbox = [
+    field.west,
+    field.north - (field.height - 1) * field.dy,
+    field.west + (field.width - 1) * field.dx,
+    field.north,
+  ];
   if (
     field.crs !== "EPSG:4326" ||
-    JSON.stringify(field.bbox) !== JSON.stringify(GEO_CONFIG.bbox) ||
+    field.bbox.length !== 4 ||
+    field.bbox[0] < sampleBbox[0] - 1e-9 ||
+    field.bbox[1] < sampleBbox[1] - 1e-9 ||
+    field.bbox[2] > sampleBbox[2] + 1e-9 ||
+    field.bbox[3] > sampleBbox[3] + 1e-9 ||
+    field.bbox[0] < GEO_CONFIG.bbox[0] - 1e-9 ||
+    field.bbox[1] < GEO_CONFIG.bbox[1] - 1e-9 ||
+    field.bbox[2] > GEO_CONFIG.bbox[2] + 1e-9 ||
+    field.bbox[3] > GEO_CONFIG.bbox[3] + 1e-9 ||
     field.values.length !== field.width * field.height ||
     field.width < 2 ||
     field.height < 2 ||
@@ -199,7 +213,7 @@ export function isLand(x: number, z: number) {
 }
 export function queryTerrain(x: number, z: number) {
   const p = worldToGeo(x, z),
-    b = GEO_CONFIG.bbox;
+    b = dem?.bbox || GEO_CONFIG.bbox;
   const inBounds =
     p.longitude >= b[0] - 1e-9 &&
     p.longitude <= b[2] + 1e-9 &&

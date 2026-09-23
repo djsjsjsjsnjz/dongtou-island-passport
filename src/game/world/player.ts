@@ -1,5 +1,7 @@
 import type { WorldData } from "../data/types";
-import { geoToWorld, worldToGeo } from "../geo/coordinates";
+import { geoToWorld, isInBounds, worldToGeo } from "../geo/coordinates";
+import { GEO_CONFIG } from "../geo/geoConfig";
+import type { BoundingBox, GeoCoordinate } from "../geo/geoTypes";
 import { contains, queryTerrain, slopeAt } from "./terrain";
 import { closestRoad, roadSegments } from "./roads";
 export const SPAWN = {
@@ -21,9 +23,14 @@ export type PlayerState = {
   longitude: number;
   latitude: number;
 };
-export function createPlayer(data: WorldData) {
+export function createPlayer(
+  data: WorldData,
+  options: { spawn?: GeoCoordinate; bounds?: BoundingBox } = {},
+) {
+  const spawn = options.spawn || SPAWN,
+    bounds = options.bounds || GEO_CONFIG.bbox;
   const roads = roadSegments(data.roads),
-    start = geoToWorld(SPAWN.latitude, SPAWN.longitude);
+    start = geoToWorld(spawn.latitude, spawn.longitude);
   // Preproject collision polygons once, retaining holes and all real footprints.
   const buildings = data.buildings.features.map((f) => {
     const g = structuredClone(f.geometry);
@@ -68,7 +75,7 @@ export function createPlayer(data: WorldData) {
   }
   const state: PlayerState = {
     ...start,
-    ...SPAWN,
+    ...spawn,
     y: 0,
     raw: null,
     slope: 0,
@@ -109,7 +116,12 @@ export function createPlayer(data: WorldData) {
       )
         return "建筑碰撞";
       const q = queryTerrain(px, pz);
-      if (!q.inBounds || q.rendered === null) return "边界 / DEM 缺失";
+      if (
+        !isInBounds(worldToGeo(px, pz), bounds) ||
+        !q.inBounds ||
+        q.rendered === null
+      )
+        return "边界 / DEM 缺失";
       if (!q.onLand || q.onWater) {
         const r = closestRoad(px, pz, roads);
         if (

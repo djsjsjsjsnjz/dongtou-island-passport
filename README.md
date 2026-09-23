@@ -1,8 +1,10 @@
-# 东岙 · 真实地理 3D 探索 MVP
+# 东岙 · Spatial Prototype 与沙滩场景切片
 
 React + TypeScript + Vite + Three.js。当前已接入真实 Copernicus DSM、公开建筑轮廓、沿实际道路移动的轻量玩家，以及地理 QA 工具。**尚未通过完整地理验收，不能进入 NPC、任务、鱼灯剧情或地标美术阶段。**主要缺口为高德/现场独立配准、建筑逐栋核验、内陆道路水体冲突和桥隧纵断面。
 
-[交付索引](docs/DELIVERY.md) · [本轮质量报告](docs/geography-validation.md) · [数据与许可](docs/data-sources.md) · [性能报告](docs/performance-report.md)
+[沙滩 Step 1 验收](docs/beach-step1-validation.md) · [冻结版交付索引](docs/DELIVERY.md) · [地理质量报告](docs/geography-validation.md) · [数据与许可](docs/data-sources.md) · [性能报告](docs/performance-report.md)
+
+当前约 2×2km Spatial Prototype 已冻结在 commit `a7168d8`，只作为 Debug Map / GIS 校准底座。新的产品方向是东岙沙滩小场景；目前只完成 Step 1 数据裁切和独立入口，尚未进入环境美术。
 
 ## 运行
 
@@ -14,6 +16,10 @@ npm run dev -- --host 127.0.0.1
 ```
 
 所有运行数据随项目缓存，不需要 key。网页不调用临时外部接口。打开 Vite 显示的地址（通常 5173；占用时顺延）。
+
+- Beach Game Scene：`/beach/`，也可使用 `/?scene=beach`。
+- 冻结 Debug Map：`/debug/map/`；根路径 `/` 保持进入 Debug Map。
+- 重新生成沙滩切片：`npm run geo:beach`。该命令只写入 `public/data/dongao-beach/`，不会修改 `public/data/dongao/`。
 
 - 默认正北俯视；拖动平移、滚轮/双指缩放，M 切换倾斜视角，全景回到 bbox。
 - 点击“跟随玩家”，用 WASD / 方向键或触控方向键行走。方向键固定东南西北，与镜头旋转无关。

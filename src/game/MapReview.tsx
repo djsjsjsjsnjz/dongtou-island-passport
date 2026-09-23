@@ -11,6 +11,7 @@ import { DEFAULT_LAYERS } from "./world/layers";
 import type { CameraMode } from "./camera/mapCamera";
 import type { PlayerState } from "./world/player";
 import { GEO_CONFIG } from "./geo/geoConfig";
+import { publicDataUrl } from "./data/publicUrl";
 import "./ui/map.css";
 const DebugPanel = import.meta.env.DEV
   ? lazy(() => import("./ui/DebugPanel"))
@@ -268,7 +269,7 @@ export default function MapReview() {
               )}
               <p className="geo-source-note">
                 地形：Copernicus WorldDEM-30 / EU & ESA。
-                <a href="data/dongao/LICENSE.md">完整许可与署名</a>
+                <a href={publicDataUrl("dongao/LICENSE.md")}>完整许可与署名</a>
               </p>
               <p className="geo-source-note">
                 OSM 数据时间：{data.report.source.osmTimestamp.slice(0, 10)}
@@ -277,7 +278,7 @@ export default function MapReview() {
               </p>
               <a
                 className="geo-source-link"
-                href={`${import.meta.env.BASE_URL}data/dongao/quality-report.json`}
+                href={publicDataUrl("dongao/quality-report.json")}
                 target="_blank"
                 rel="noreferrer"
               >

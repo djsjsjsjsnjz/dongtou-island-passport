@@ -1,11 +1,9 @@
 import type { WorldData } from "./types";
 import { configureTerrain } from "../world/terrain";
 import { GEO_CONFIG } from "../geo/geoConfig";
+import { publicDataUrl } from "./publicUrl";
 export async function loadWorld(signal: AbortSignal): Promise<WorldData> {
-  const response = await fetch(
-    `${import.meta.env.BASE_URL}data/dongao/world.json`,
-    { signal },
-  );
+  const response = await fetch(publicDataUrl("dongao/world.json"), { signal });
   if (!response.ok)
     throw new Error(
       `地图缓存读取失败 (${response.status})。请先运行 npm run geo:process。`,
@@ -40,7 +38,7 @@ export async function loadWorld(signal: AbortSignal): Promise<WorldData> {
   )
     throw new Error("DEM 网格配置缺失或不匹配");
   const meshResponse = await fetch(
-    `${import.meta.env.BASE_URL}data/dongao/dem/terrain.f32`,
+    publicDataUrl("dongao/dem/terrain.f32"),
     { signal },
   );
   if (!meshResponse.ok) throw new Error("DEM 网格缓存读取失败");

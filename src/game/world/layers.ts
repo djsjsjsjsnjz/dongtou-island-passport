@@ -8,6 +8,7 @@ import { GEO_CONFIG } from "../geo/geoConfig";
 import controlsData from "../../../data/dongao/controls.json";
 import { getTerrainHeight } from "./terrain";
 import { geoToWorld } from "../geo/coordinates";
+import { publicDataUrl } from "../data/publicUrl";
 export type LayerId =
   | "buildings"
   | "roads"
@@ -206,7 +207,7 @@ export function buildWorldLayers(data: WorldData) {
       sw = geoToWorld(b[1], b[0]),
       ne = geoToWorld(b[3], b[2]);
     const texture = new THREE.TextureLoader().load(
-      `${import.meta.env.BASE_URL}data/dongao/reference/sentinel-20250320.png`,
+      publicDataUrl("dongao/reference/sentinel-20250320.png"),
     );
     texture.colorSpace = THREE.SRGBColorSpace;
     const plane = new THREE.PlaneGeometry(ne.x - sw.x, sw.z - ne.z);

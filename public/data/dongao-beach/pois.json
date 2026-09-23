@@ -1,0 +1,24 @@
+[
+  {
+    "id": "way/836480414",
+    "name": "东岙沙滩",
+    "longitude": 121.15720669701527,
+    "latitude": 27.8242077,
+    "type": "beach",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/way/836480414",
+    "positionMethod": "polygon-interior-point"
+  },
+  {
+    "id": "node/13607433057",
+    "name": "东岙村",
+    "longitude": 121.1567624,
+    "latitude": 27.8257104,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433057",
+    "positionMethod": "osm-node"
+  }
+]

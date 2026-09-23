@@ -15,6 +15,7 @@
     "geo:process": "tsx scripts/process-geo.ts && tsx scripts/qa-geography.ts",
     "geo:check": "tsc -p tsconfig.scripts.json",
     "geo:bake": "tsx scripts/bake-terrain.ts",
+    "geo:beach": "tsx scripts/build-beach-slice.ts",
     "geo:qa": "tsx scripts/qa-geography.ts",
     "test:performance": "node scripts/benchmark-map.mjs"
   },
