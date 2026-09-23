@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting-osm-review",
+  "config": {
+    "id": "dongao",
+    "crs": "EPSG:4326",
+    "center": {
+      "longitude": 121.157,
+      "latitude": 27.8255
+    },
+    "bbox": [
+      121.14685,
+      27.81648,
+      121.16715,
+      27.83452
+    ],
+    "maxSizeMeters": 3000,
+    "centerEvidence": "https://www.openstreetmap.org/node/13607433057"
+  },
+  "dimensions": {
+    "width": 1999.9532403179433,
+    "depth": 1999.1322334557472
+  },
+  "counts": {
+    "roads": 49,
+    "buildings": 1,
+    "coastline": 6,
+    "water": 4,
+    "landuse": 14,
+    "pois": 13,
+    "land": 1,
+    "sea": 1
+  },
+  "poiCount": 11,
+  "warnings": [
+    "OSM 建筑轮廓仅 1 个，不能代表村庄完整建筑分布；未生成虚构住宅。",
+    "OSM 道路仅表示已采集路网；巷道、入口及通行状态需现场核对。",
+    "DEM 未接入；当前为零高程平面，不表示真实山体。",
+    "POI 面要素使用面内代表点，不表示真实入口。"
+  ],
+  "source": {
+    "source": "OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "sourceUrl": "https://www.openstreetmap.org/copyright",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "retrievedAt": "2026-09-22T13:57:59.984322+00:00",
+    "osmTimestamp": "2026-09-22T08:45:51Z",
+    "bbox": [
+      121.14685,
+      27.81648,
+      121.16715,
+      27.83452
+    ],
+    "center": {
+      "longitude": 121.157,
+      "latitude": 27.8255
+    },
+    "query": "[out:json][timeout:45];(nwr[\"highway\"](27.81648,121.14685,27.83452,121.16715);nwr[\"building\"](27.81648,121.14685,27.83452,121.16715);nwr[\"natural\"~\"coastline|water|beach|wood|scrub\"](27.81648,121.14685,27.83452,121.16715);nwr[\"waterway\"](27.81648,121.14685,27.83452,121.16715);nwr[\"landuse\"](27.81648,121.14685,27.83452,121.16715);nwr[\"tourism\"](27.81648,121.14685,27.83452,121.16715);nwr[\"amenity\"](27.81648,121.14685,27.83452,121.16715);nwr[\"historic\"](27.81648,121.14685,27.83452,121.16715);nwr[\"place\"](27.81648,121.14685,27.83452,121.16715););out body geom;",
+    "queryNote": "Initial acquisition used equivalent separate coastline way and natural water/beach/wood/scrub selectors."
+  },
+  "dem": null,
+  "buildingHeights": "OSM height/levels when available, otherwise deterministic illustrative heights",
+  "coastMethod": "Complete OSM island relation polygons and closed coastline rings, union + bbox intersection; sea = bbox minus land. All coastline vertices checked against land boundaries."
+}

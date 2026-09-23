@@ -23,7 +23,7 @@ function changed(a: PNG, b: PNG, filter: (r: number, g: number, b: number, x: nu
 test('complete visitor journey, persistence, download, redeem and reset', async ({ page }, testInfo) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/');
+  await page.goto('/?demo=legacy');
   await expect(page.locator('.scene canvas')).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('desktop-map.png') });
   await page.getByRole('button', { name: '海岛奖励', exact: true }).click();
@@ -89,7 +89,7 @@ test('complete visitor journey, persistence, download, redeem and reset', async 
 });
 
 test('WebGL pixels, water, walking and camera control', async ({ page }, testInfo) => {
-  await page.goto('/'); await expect(page.locator('#pin-plaza')).toHaveCSS('visibility', 'visible');
+  await page.goto('/?demo=legacy'); await expect(page.locator('#pin-plaza')).toHaveCSS('visibility', 'visible');
   const a = await pixels(page);
   const colors = new Set(); for (let i = 0; i < a.data.length; i += 160) colors.add(`${a.data[i]},${a.data[i + 1]},${a.data[i + 2]}`);
   expect(colors.size).toBeGreaterThan(100);
@@ -117,7 +117,7 @@ test('WebGL pixels, water, walking and camera control', async ({ page }, testInf
 
 test('portrait and landscape touch, drawer layout and reduced motion', async ({ browser }, testInfo) => {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, deviceScaleFactor: 1, reducedMotion: 'reduce' });
-  const page = await context.newPage(); await page.goto('http://127.0.0.1:5173/');
+  const page = await context.newPage(); await page.goto('http://127.0.0.1:5173/?demo=legacy');
   await expect(page.locator('#pin-plaza')).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('mobile-map.png') });
   const a = await pixels(page); await page.waitForTimeout(200); const b = await pixels(page);
@@ -160,7 +160,7 @@ test('storage denied and WebGL unavailable still allow tasks', async ({ page }, 
       return original.apply(this, [type, ...args] as never);
     } as typeof original;
   });
-  await page.goto('/');
+  await page.goto('/?demo=legacy');
   await expect(page.getByText('海岛故事，继续出发')).toBeVisible();
   await expect(page.locator('.storage-warning')).toContainText('仍可体验');
   await visit(page, '东岙广场');

@@ -1,0 +1,11 @@
+{
+  "readings": [
+    "120 FPS · 13 draw calls\n6,513 triangles · 13 geometries\nJS heap 15 MB · 0 textures",
+    "120 FPS · 13 draw calls\n6,513 triangles · 13 geometries\nJS heap 17 MB · 0 textures",
+    "120 FPS · 13 draw calls\n6,513 triangles · 13 geometries\nJS heap 19 MB · 0 textures",
+    "120 FPS · 13 draw calls\n6,513 triangles · 13 geometries\nJS heap 14 MB · 0 textures"
+  ],
+  "colors": 252,
+  "external": [],
+  "errors": []
+}

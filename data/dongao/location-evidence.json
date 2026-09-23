@@ -1,0 +1,34 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-22T08:45:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 13607433057,
+  "lat": 27.8257104,
+  "lon": 121.1567624,
+  "tags": {
+    "name": "东岙村",
+    "place": "village"
+  }
+},
+{
+  "type": "way",
+  "id": 836480414,
+  "center": {
+    "lat": 27.8242077,
+    "lon": 121.1570509
+  },
+  "tags": {
+    "name": "东岙沙滩",
+    "natural": "beach"
+  }
+}
+
+  ]
+}

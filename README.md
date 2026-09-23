@@ -1,82 +1,114 @@
-# 海岛寻宝 · 洞头数字旅行护照
+# 东岙 · 真实地图骨架
 
-轻 3D 文旅概念 Demo。打开即进入海湾，访问五个目的地，完成任务、收藏印章、下载纪念卡，并体验一次模拟兑换。没有服务器、账号、GPS、摄像头和运营后台。
+基于 React、TypeScript、Vite 和原生 Three.js 的洞头东岙地图原型。当前交付范围为 **STEP 4：OSM + WGS84 坐标 + 俯视地图**，等待用户核对海岸、道路与村庄位置后再接入 DEM。
 
-在线体验：https://djsjsjsjsnjz.github.io/dongtou-island-passport/
+## 先运行
 
-## 运行
-
-需要 Node.js 20.19+ 或 22.12+。
+需要 Node.js 20.19+ / 22.12+。
 
 ```sh
-npm install
-npm run dev -- --port 5173
+npm ci
+npm run dev
 ```
 
-打开 http://127.0.0.1:5173/ 。如端口占用，Vite 会在终端显示另一个可用地址。默认仅绑定本机，不向局域网开放。
+打开终端给出的本地地址，通常为 http://127.0.0.1:5173/ 。仓库自带一次合法获取的 OSM 静态缓存，**启动/构建/刷新都不请求 OSM、高德或 DEM**，不需要 API key。
+
+- 默认正北俯视；拖动平移，滚轮/双指缩放。按 **M** 或按钮切换倾斜视角，倾斜时拖动环视。
+- 点击“东岙村”“东岙沙滩”聚焦真实 POI，旁边来源链接打开原始 OSM 对象。
+- 开发环境显示图层开关、100 m 网格、游标 WGS84/世界坐标、平面高度和渲染统计。生产构建不包含 DebugPanel。
+- 手机地图下方有可滚动的数据/调试区。
+- 原任务、印章、奖励、纪念卡和持久化在 `/?demo=legacy` 保留，默认地图不读写旧进度。[旧演示说明](docs/legacy-demo.md)。
+
+## 当前地图事实与缺口
+
+中心 WGS84：`121.157°E, 27.8255°N`。
+
+Bounding Box `[west, south, east, north]`：`[121.14685, 27.81648, 121.16715, 27.83452]`，约 **1999.95 m × 1999.13 m**。
+
+| 数据 | 本次结果 |
+| --- | --- |
+| 道路 | 49 个要素（含 1 个步行区域面） |
+| 海岸 | 6 个 coastline 要素，完整岛屿关系裁剪 |
+| 建筑 | **只有 1 个 footprint，覆盖严重不足** |
+| 土地用途 / 自然地表 | 14 个要素，含住宅用地、沙滩、林地 |
+| 命名 POI | 11 个，含东岙村、东岙沙滩 |
+| DEM / 玩家 | **尚未接入，等待 OSM 审阅确认** |
+
+褐色住宅用地不是逐栋建筑；没有随机生成房屋填补空白。建筑生成器已实现 footprint 拉伸和合并，但真实村庄建筑分布仍需有明确授权的轮廓。OSM 路网不保证巷道/入口完整。
+
+`getTerrainHeight(x,z)` 当前返回明确的零高程审阅平面，不是地形数据。不会以平面或随机山体冒充 DEM。建筑高度优先使用 OSM height/levels，否则使用稳定的示意高度，不能当作实测。
+
+## 离线数据流程
 
 ```sh
-npm run build
-npm run preview -- --host 127.0.0.1 --port 4173
+# 有缓存默认不联网；更改 bbox 后需要显式刷新
+npm run geo:fetch
+# 主动更新才访问 Overpass：
+npm run geo:fetch -- --refresh
+# 仅处理本地缓存，输出 GeoJSON、POI、质量报告及浏览器 bundle
+npm run geo:process
+npm run dev
 ```
 
-生产文件在 `dist/`。所有场景模型由程序化几何体生成，不依赖远程图片、字体、模型或运行时 API。
+bbox 输入与唯一坐标原点在 `data/dongao/config.json`；两边不允许超过 3 km，原点必须在范围内。当前陆海处理依赖完整岛屿多边形，适合本次东岙范围；更换到无完整岛屿关系的区域会明确报错，不能自动猜测开放海岸的封口方向。
 
-页面通过 GitHub Pages 的 `gh-pages` 分支公开访问。构建资源使用相对路径，适配项目路径 `/dongtou-island-passport/`。更新时先推送 `main`，再运行 `npm run deploy`，它会完成构建并发布到 `gh-pages` 分支。
+`geo:fetch` 使用系统 curl（支持系统 HTTPS 代理），90 秒超时；公共 API 失败时不覆盖缓存，不自动重试轰炸。可在 `.env.local` 配置非秘密的 `OVERPASS_URL`。原始快照为此次 bbox 命中的完整 OSM 对象，包含跨界岛屿边界用于正确裁剪；浏览器数据全部限制在 bbox 内。
 
-## 体验流程
+```text
+data/dongao/
+  config.json                  # WGS84 唯一原点与 bbox
+  location-evidence.json        # 村庄/沙滩原始定位证据
+  osm.raw.json                  # Overpass 完整几何快照
+  fetch-manifest.json           # 获取时间、查询、许可
+  roads.geojson / buildings.geojson / coastline.geojson
+  land.geojson / sea.geojson / water.geojson / landuse.geojson
+  pois.geojson / pois.json      # 后者为统一 WGS84 代表点
+  quality-report.json          # 覆盖统计、缺口、DEM 状态
+  dem/README.md                # 下一阶段合法 DEM 获取说明
+public/data/dongao/             # 处理产物；运行时只加载 world.json
+```
 
-1. 点击地图标记或目的地列表，人物沿海岸小路前往。
-2. 东岙广场点亮三盏渔灯；七夕古巷回答“做十六”；东岙沙滩收集三枚数字贝壳。
-3. 海风民宿输入演示口令“海风”；渔家小馆浏览三道菜后选择餐单。
-4. 集齐五章，在海岛奖励中填写昵称，下载 1080 × 1440 PNG 纪念卡。
-5. 使用页面上的演示兑换码，模拟核销一次。可重访点位，但不会重复发章或核销。
+经纬度原始数据是事实来源，worldX/worldZ 始终通过投影派生。`geoToWorld(latitude,longitude)`，`worldToGeo(x,z)`；GeoJSON 数组顺序固定 `[longitude,latitude]`。世界单位米，+X 向东、-Z 向北、+Y 向上。使用 WGS84 椭球在原点处的局部平面近似，仅面向 ≤3 km 的本地图。
 
-拖动地图环视，滚轮或双指缩放；罗盘按钮恢复全景。手机提供底部任务抽屉和目的地菜单。关闭任务不丢失已完成步骤。刷新会恢复本机进度；“重新开始”需再次确认。
-
-进度保存在浏览器 `localStorage` 的 `dongtou-passport-v1` 键中，仅限当前设备、浏览器和站点地址。禁止存储时仍可体验，但刷新后可能丢失进度。WebGL 不可用或上下文丢失时自动使用点位列表，任务与奖励仍然可用。
-
-## 内容边界
-
-- 原型为东岙渔村，地图为创作性概念布局，不对应真实比例、道路、距离，不可用于实景导航。
-- 东岙广场、七夕古巷、东岙沙滩，以及“做十六”民俗参考 [洞头发布 / 温度新闻，2026-08-15](https://www.66wz.com/wendu/system/2026/08/15/105822611.shtml)。不表示与当地政府或运营方合作，也不表示现实活动仍在举行。
-- 海风民宿、渔家小馆、三道菜品组合及奖励均为虚构示范内容。
-- 纪念卡不是官方凭证，兑换码无实际消费权益，不能线下兑换。
-- 本地状态可由使用者修改，不应直接用作真实核销系统。正式运营需加入服务器校验、商户与素材授权、隐私告知等。
+道路按 OSM 类型设置示意宽度，保留折线拓扑；桥梁稍抬高、隧道变灰仅为审阅表达，暂无高程剖面。海面是 **bbox 减去真实陆地 polygon**，没有用整张海平面穿过陆地。多边形保留洞，验证海陆无重叠且覆盖整个范围。
 
 ## 代码结构
 
-| 文件 | 内容 |
-| --- | --- |
-| `src/data.ts` | 点位、介绍、印章、场景坐标、路线节点、菜品 |
-| `src/Scene.tsx` | Three.js 海湾、几何体、官方 OrbitControls、人物寻路、海面与船只动画 |
-| `src/progress.ts` | 纯状态转换、去重、持久化读取校验、奖励门槛 |
-| `src/App.tsx` | 任务、护照、奖励、手机抽屉与异常降级 |
-| `src/card.ts` | 本地 Canvas2D 纪念卡与 PNG 下载 |
-| `src/style.css` | 视觉、桌面/竖屏/横屏布局、减少动态效果 |
+```text
+src/game/geo/       配置、坐标类型、WGS84 投影与范围约束
+src/game/data/      静态数据读取、schema 和坐标配置校验
+src/game/world/     陆海/土地用途、合并道路、合并 footprint 建筑、POI、渲染生命周期
+src/game/camera/    俯视/倾斜镜头、平移范围、缩放
+src/game/ui/        审阅布局、开发专用 DebugPanel
+src/services/amap/  GCJ-02 接口占位，不执行 API 请求或坐标转换
+scripts/           采集、裁剪、质量检查
+```
 
-更换村落时，先调整 `data.ts` 内容和坐标，再调整 `Scene.tsx` 建筑与道路。任务类型属于当前五种示例，不是任意任务后台配置器。
+GIS 依赖仅供开发脚本使用，不进入浏览器。`osmtogeojson` 的 XML 间接依赖已覆盖为修复版本；本项目只解析 JSON。浏览器没有引入 R3F/Next.js，也没有新增服务器。
 
 ## 验证
 
 ```sh
-npm test
-npx playwright install chromium
-npm run test:e2e
-```
-
-已经安装 Google Chrome 时也可以使用：
-
-```sh
+npm run geo:fetch     # 应命中缓存、不访问网络
+npm run geo:process
+npm run geo:check     # GIS 脚本 TypeScript 检查
+npm test             # 坐标/裁剪/陆海一致性 + 原进度回归
+npm run build        # 应用 TypeScript + Vite
 PLAYWRIGHT_CHANNEL=chrome npm run test:e2e
+# 或 npx playwright install chromium 后 npm run test:e2e
+npm run preview -- --host 127.0.0.1 --port 4173
 ```
 
-Playwright 会复用 5173 的本地服务，或自动启动服务。截图、PNG 纪念卡与测试记录输出到 `test-results/`。
+测试截图与性能采样在 `test-results/`，验证结论在 [阶段验证记录](docs/phase-one-validation.md)。统计值包括当前 RAF FPS、draw calls、三角面、几何体和可用时的 JS heap；JS heap 不是 GPU 显存或设备总内存。
 
-覆盖内容：任务步骤去重、餐单与奖励前置条件、部分进度与刷新恢复、错误答案与口令、重复核销、重置确认、昵称与 PNG 下载、WebGL/存储不可用降级、桌面 1440 × 900、手机 390 × 844 与横屏 844 × 390、触控拖动、画布非空、海面与人物像素变化、镜头缩放与环视、减少动态效果。
+手机尺寸模拟不能证明真实手机 30 FPS。当前不宣称完整第一阶段十项验收通过，也没有承诺地图与现实完全一致。下一步需用户确认 OSM 空间方向，并补足建筑覆盖；随后才接 DEM 和步行玩家。
 
-## 性能范围
+## 数据来源与后续输入
 
-渲染像素比上限 1.5，共享常用几何体与材质，页面隐藏时取消动画帧，遵循系统“减少动态效果”。移动与镜头由 Three.js 驱动，不逐帧更新 React 状态。卸载时释放几何体、材质和渲染器。
+[来源/许可登记](docs/data-sources.md) · [仓库审计与改造方案](docs/repository-audit.md)。页面保留 © OpenStreetMap contributors 和 ODbL 链接，源数据与派生 GIS 数据按 ODbL-1.0 提供。
 
-浏览器中的手机尺寸与触控属于桌面模拟，不代表真实手机帧率、发热或内存测试。真实 iOS/Android 设备、微信内置浏览器下载行为，以及低端 GPU 仍需实机验收。首次加载包含 Three.js，生产构建会提示其独立包超过 500 kB；该提示不阻断构建。
+DEM 候选为 Copernicus GLO-30，可从公开 AWS 数据取得；OpenTopography 按账户/API 权限取得。待地图确认后才实现 GeoTIFF 裁剪和 height field 处理，详见 [DEM 说明](data/dongao/dem/README.md)。
+
+高德只预留 GCJ-02 类型接口，未接入数据。任何未来 POI 必须先通过合法可靠的转换流程统一为 WGS84。`AMAP_API_KEY` / `OPENTOPOGRAPHY_API_KEY` 只能保存在被忽略的 `.env.local`，不能加 `VITE_` 前缀，也不能提交或打包进前端。未来高德 Web 服务 key 需服务端调用。
+
+项目仍可用原 `npm run deploy` 发布 GitHub Pages，但本次修改没有自动推送或发布。

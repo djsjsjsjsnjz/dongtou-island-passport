@@ -1,0 +1,20 @@
+{
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "retrievedAt": "2026-09-22T13:57:59.984322+00:00",
+  "osmTimestamp": "2026-09-22T08:45:51Z",
+  "bbox": [
+    121.14685,
+    27.81648,
+    121.16715,
+    27.83452
+  ],
+  "center": {
+    "longitude": 121.157,
+    "latitude": 27.8255
+  },
+  "query": "[out:json][timeout:45];(nwr[\"highway\"](27.81648,121.14685,27.83452,121.16715);nwr[\"building\"](27.81648,121.14685,27.83452,121.16715);nwr[\"natural\"~\"coastline|water|beach|wood|scrub\"](27.81648,121.14685,27.83452,121.16715);nwr[\"waterway\"](27.81648,121.14685,27.83452,121.16715);nwr[\"landuse\"](27.81648,121.14685,27.83452,121.16715);nwr[\"tourism\"](27.81648,121.14685,27.83452,121.16715);nwr[\"amenity\"](27.81648,121.14685,27.83452,121.16715);nwr[\"historic\"](27.81648,121.14685,27.83452,121.16715);nwr[\"place\"](27.81648,121.14685,27.83452,121.16715););out body geom;",
+  "queryNote": "Initial acquisition used equivalent separate coastline way and natural water/beach/wood/scrub selectors."
+}

@@ -4,3 +4,8 @@ test-results/
 playwright-report/
 *.tsbuildinfo
 .DS_Store
+.env
+.env.*
+!.env.example
+data/dongao/dem/*.tif
+data/dongao/dem/*.tiff

@@ -1,0 +1,123 @@
+[
+  {
+    "id": "way/836480414",
+    "name": "东岙沙滩",
+    "longitude": 121.15720669701527,
+    "latitude": 27.8242077,
+    "type": "beach",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/way/836480414",
+    "positionMethod": "polygon-interior-point"
+  },
+  {
+    "id": "way/1482591412",
+    "name": "洞头区实验中学",
+    "longitude": 121.15592698760081,
+    "latitude": 27.83193655,
+    "type": "poi",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/way/1482591412",
+    "positionMethod": "polygon-interior-point"
+  },
+  {
+    "id": "node/7807298442",
+    "name": "Ying Yang",
+    "longitude": 121.1519406,
+    "latitude": 27.8219246,
+    "type": "poi",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/7807298442",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607337546",
+    "name": "洞头韭菜岙沙滩",
+    "longitude": 121.1479703,
+    "latitude": 27.8167585,
+    "type": "beach",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607337546",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433055",
+    "name": "后坑村",
+    "longitude": 121.1529643,
+    "latitude": 27.8341233,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433055",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433056",
+    "name": "中仑村",
+    "longitude": 121.1545242,
+    "latitude": 27.8286832,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433056",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433057",
+    "name": "东岙村",
+    "longitude": 121.1567624,
+    "latitude": 27.8257104,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433057",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433058",
+    "name": "惠民村",
+    "longitude": 121.159358,
+    "latitude": 27.8314683,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433058",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433059",
+    "name": "惠头簝村",
+    "longitude": 121.1610911,
+    "latitude": 27.8299333,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433059",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13607433061",
+    "name": "垄头村",
+    "longitude": 121.1669397,
+    "latitude": 27.8288353,
+    "type": "village",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13607433061",
+    "positionMethod": "osm-node"
+  },
+  {
+    "id": "node/13619150655",
+    "name": "东屏街道",
+    "longitude": 121.1537075,
+    "latitude": 27.8289861,
+    "type": "suburb",
+    "crs": "EPSG:4326",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13619150655",
+    "positionMethod": "osm-node"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "id": "dongao",
+  "crs": "EPSG:4326",
+  "center": { "longitude": 121.157, "latitude": 27.8255 },
+  "bbox": [121.14685, 27.81648, 121.16715, 27.83452],
+  "maxSizeMeters": 3000,
+  "centerEvidence": "https://www.openstreetmap.org/node/13607433057"
+}
